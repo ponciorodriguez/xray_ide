@@ -1,0 +1,19 @@
+Listado image_db
+
+torax_pa
+torax_lateral
+craneo_ap
+craneo_lateral
+cadera_ap
+cadera_lat
+cadera_oblicua
+hombro_ap
+hombro_lat
+hombro_oclicua
+mano_ap
+mano_lateral
+muñeca_ap
+muñeca_lat
+dedo
+cervical_ap
+cervical_lateral

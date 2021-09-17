@@ -4,6 +4,9 @@ import time
 import winsound
 import random
 import os
+from PIL import Image
+
+
 cwd = os.path.dirname(__file__)
 
 
@@ -186,6 +189,9 @@ def sedecal():
 			winsound.Beep(frequency, duration)
 			shoot_s = Label(main_frame, image = simbolorx_off_s,  bg="grey")
 			shoot_s.place(x=500, y= 515)
+			time.sleep
+			img = Image.open(f"{cwd}\img_db/torax.png")
+			img.show()
 			contador_alarma = contador_alarma + 1
 			if contador_alarma >= 8 :
 				alarma_on()

@@ -72,11 +72,10 @@ text_7 = str("--------")
 text_8 = str("--------")
 sens_s_s_str = (" " + "0")
 sens_s_s = 0
+counter_b1 = 0
 
 def sedecal():
 	#seleccion kilovoltios grafia
-
-
 	def click_kv_cont_up():
 		global kv
 		global releasekvup
@@ -452,6 +451,37 @@ def sedecal():
 		textomA.delete("1.0","end")
 		textomA.insert(INSERT, mA_str )
 
+	def apr_1_pressed():
+
+		global counter_b1
+		if counter_b1 == 0:
+			apr_name_1.delete("1.0","end")
+			apr_name_1.insert(INSERT, "  Torax")
+			counter_b1 +=1 
+		elif counter_b1 == 1:
+			apr_name_1.delete("1.0","end")
+			apr_name_1.insert(INSERT, "   PA  ")	
+			apr_name_2.delete("1.0","end")
+			apr_name_2.insert(INSERT, "LATERAL")
+			apr_name_3.delete("1.0","end")
+			apr_name_3.insert(INSERT, "ESTERNON")
+			apr_name_4.delete("1.0","end")
+			apr_name_4.insert(INSERT, "P.COSTAL")
+			apr_name_5.delete("1.0","end")
+			apr_name_5.insert(INSERT, "--------")
+			apr_name_6.delete("1.0","end")
+			apr_name_6.insert(INSERT, "--------")
+			apr_name_7.delete("1.0","end")
+			apr_name_7.insert(INSERT, "--------")
+			apr_name_8.delete("1.0","end")
+			apr_name_8.insert(INSERT, "--------")
+			counter_b1 +=1 
+		
+
+
+
+
+
 	def b_mesa_pressed():
 		boton_b_mesa = Button(root , width = 50, height = 50, image = b_mesa_yellow_s, command = b_mesa_pressed)
 		boton_b_mesa.place(x=450 , y = 600)
@@ -825,7 +855,7 @@ def sedecal():
 	boton_tubo_s.place(x=800 , y =30)
 	boton_puesto_s = Button(top_frame, image = puesto_s , width = 40, height = 40, command = None)
 	boton_puesto_s.place(x =800 , y = 100)
-	boton_1_s = Button(top_frame, image = apr_1_s , width = 40, height = 40, command = None)
+	boton_1_s = Button(top_frame, image = apr_1_s , width = 40, height = 40, command =apr_1_pressed)
 	boton_1_s.place(x=500, y =30)
 	boton_2_s = Button(top_frame, image = apr_2_s , width = 40, height = 40, command = None)
 	boton_2_s.place(x =570 , y = 30)
@@ -846,50 +876,50 @@ def sedecal():
 	apr_name_1.config( width=8, height=1,  font=("Consolas",15), bg="black", fg ="light green") 
 	apr_name_1.insert(INSERT, text_1)
 	apr_name_1.place(x=50 , y = 60) 
-	apr_name_1 = Label(top_frame, text="1", font=("Consolas", 15, "bold"), bg="grey" , fg = "black")
-	apr_name_1.place(x=85, y= 30)
+	apr_name_1_1 = Label(top_frame, text="1", font=("Consolas", 15, "bold"), bg="grey" , fg = "black")
+	apr_name_1_1.place(x=85, y= 30)
 	apr_name_2 = Text(top_frame)	
 	apr_name_2.config( width=8, height=1,  font=("Consolas",15), bg="black", fg ="light green") 
 	apr_name_2.insert(INSERT, text_2)
 	apr_name_2.place(x=140 , y = 60) 
-	apr_name_2 = Label(top_frame, text="2", font=("Consolas", 15, "bold"), bg="grey" , fg = "black")
-	apr_name_2.place(x=175, y= 30)
+	apr_name_2_2 = Label(top_frame, text="2", font=("Consolas", 15, "bold"), bg="grey" , fg = "black")
+	apr_name_2_2.place(x=175, y= 30)
 	apr_name_3 = Text(top_frame)	
 	apr_name_3.config( width=8, height=1,  font=("Consolas",15), bg="black", fg ="light green") 
 	apr_name_3.insert(INSERT, text_3)
 	apr_name_3.place(x=230 , y = 60) 
-	apr_name_3 = Label(top_frame, text="3", font=("Consolas", 15, "bold"), bg="grey" , fg = "black")
-	apr_name_3.place(x=265, y= 30)
+	apr_name_3_3 = Label(top_frame, text="3", font=("Consolas", 15, "bold"), bg="grey" , fg = "black")
+	apr_name_3_3.place(x=265, y= 30)
 	apr_name_4 = Text(top_frame)	
 	apr_name_4.config( width=8, height=1,  font=("Consolas",15), bg="black", fg ="light green") 
 	apr_name_4.insert(INSERT, text_4)
 	apr_name_4.place(x=320 , y = 60) 
-	apr_name_4 = Label(top_frame, text="4", font=("Consolas", 15, "bold"), bg="grey" , fg = "black")
-	apr_name_4.place(x=355, y= 30)
+	apr_name_4_4 = Label(top_frame, text="4", font=("Consolas", 15, "bold"), bg="grey" , fg = "black")
+	apr_name_4_4.place(x=355, y= 30)
 	apr_name_5 = Text(top_frame)	
 	apr_name_5.config( width=8, height=1,  font=("Consolas",15), bg="black", fg ="light green") 
 	apr_name_5.insert(INSERT, text_5)
 	apr_name_5.place(x=50 , y = 85) 
-	apr_name_5 = Label(top_frame, text="5", font=("Consolas", 15, "bold"), bg="grey" , fg = "black")
-	apr_name_5.place(x=85, y= 115)
+	apr_name_5_5 = Label(top_frame, text="5", font=("Consolas", 15, "bold"), bg="grey" , fg = "black")
+	apr_name_5_5.place(x=85, y= 115)
 	apr_name_6 = Text(top_frame)	
 	apr_name_6.config( width=8, height=1,  font=("Consolas",15), bg="black", fg ="light green") 
 	apr_name_6.insert(INSERT, text_6)
 	apr_name_6.place(x=140 , y = 85) 
-	apr_name_6 = Label(top_frame, text="6", font=("Consolas", 15, "bold"), bg="grey" , fg = "black")
-	apr_name_6.place(x=175, y= 115)
+	apr_name_6_6 = Label(top_frame, text="6", font=("Consolas", 15, "bold"), bg="grey" , fg = "black")
+	apr_name_6_6.place(x=175, y= 115)
 	apr_name_7 = Text(top_frame)	
 	apr_name_7.config( width=8, height=1,  font=("Consolas",15), bg="black", fg ="light green") 
 	apr_name_7.insert(INSERT, text_7)
 	apr_name_7.place(x=230 , y = 85) 
-	apr_name_7 = Label(top_frame, text="7", font=("Consolas", 15, "bold"), bg="grey" , fg = "black")
-	apr_name_7.place(x=265, y= 115)
+	apr_name_7_7 = Label(top_frame, text="7", font=("Consolas", 15, "bold"), bg="grey" , fg = "black")
+	apr_name_7_7.place(x=265, y= 115)
 	apr_name_8 = Text(top_frame)	
 	apr_name_8.config( width=8, height=1,  font=("Consolas",15), bg="black", fg ="light green") 
 	apr_name_8.insert(INSERT, text_8)
 	apr_name_8.place(x=320 , y = 85) 
-	apr_name_8 = Label(top_frame, text="8", font=("Consolas", 15, "bold"), bg="grey" , fg = "black")
-	apr_name_8.place(x=355, y= 115)
+	apr_name_8_8 = Label(top_frame, text="8", font=("Consolas", 15, "bold"), bg="grey" , fg = "black")
+	apr_name_8_8.place(x=355, y= 115)
 
 
 

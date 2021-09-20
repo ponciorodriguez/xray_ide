@@ -501,6 +501,12 @@ def sedecal():
 		textosg.insert(INSERT, round(sg , 2))
 		textomAs.delete("1.0","end")
 		textomAs.insert(INSERT, mAs )
+		apr_name_2.delete("1.0","end")
+		apr_name_2.insert(INSERT, "--------")
+		apr_name_3.delete("1.0","end")
+		apr_name_3.insert(INSERT, "--------")		
+		apr_name_4.delete("1.0","end")		
+		apr_name_4.insert(INSERT, "--------")
 
 	def tecnica_torax_lat():
 		global mA_str
@@ -519,6 +525,12 @@ def sedecal():
 		textosg.insert(INSERT, round(sg , 2))
 		textomAs.delete("1.0","end")
 		textomAs.insert(INSERT, mAs )
+		apr_name_1.delete("1.0","end")
+		apr_name_1.insert(INSERT, "--------")
+		apr_name_3.delete("1.0","end")
+		apr_name_3.insert(INSERT, "--------")		
+		apr_name_4.delete("1.0","end")		
+		apr_name_4.insert(INSERT, "--------")		
 
 
 

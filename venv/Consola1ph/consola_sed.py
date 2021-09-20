@@ -475,9 +475,50 @@ def sedecal():
 			apr_name_7.insert(INSERT, "--------")
 			apr_name_8.delete("1.0","end")
 			apr_name_8.insert(INSERT, "--------")
-			counter_b1 +=1 
-		
+			boton_1_s = Button(top_frame, image = apr_1_s , width = 40, height = 40, command =tecnica_torax_pa)
+			boton_1_s.place(x=500, y =30)
+			boton_2_s = Button(top_frame, image = apr_2_s , width = 40, height = 40, command = tecnica_torax_lat)
+			boton_2_s.place(x =570 , y = 30)
+			boton_3_s = Button(top_frame, image = apr_3_s , width = 40, height = 40, command = None)
+			boton_3_s.place(x=640 , y =30)
+			boton_4_s = Button(top_frame, image = apr_4_s , width = 40, height = 40, command = None)
+			boton_4_s.place(x =710 , y = 30)
 
+	def tecnica_torax_pa():
+		global mA_str
+		global sg 
+		global mAs
+		sg = 0.1
+		mA = 350
+		mAs = mA*sg
+		kv_str = (" " + str(110))
+		textokv.delete("1.0","end")
+		textokv.insert(INSERT, (kv_str))
+		mA_str = (" " + str(mA))
+		textomA.delete("1.0","end")
+		textomA.insert(INSERT, mA_str )
+		textosg.delete("1.0","end")			
+		textosg.insert(INSERT, round(sg , 2))
+		textomAs.delete("1.0","end")
+		textomAs.insert(INSERT, mAs )
+
+	def tecnica_torax_lat():
+		global mA_str
+		global sg 
+		global mAs
+		sg = 0.1
+		mA = 350
+		mAs = mA*sg
+		kv_str = (" " + str(125))
+		textokv.delete("1.0","end")
+		textokv.insert(INSERT, (kv_str))
+		mA_str = (" " + str(mA))
+		textomA.delete("1.0","end")
+		textomA.insert(INSERT, mA_str )
+		textosg.delete("1.0","end")			
+		textosg.insert(INSERT, round(sg , 2))
+		textomAs.delete("1.0","end")
+		textomAs.insert(INSERT, mAs )
 
 
 

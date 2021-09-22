@@ -607,12 +607,6 @@ def sedecal():
 		boton_bajarmA.place(x=362 , y = 415)
 
 
-
-
-
-
-
-
 	def b_mesa_pressed():
 		boton_b_mesa = Button(root , width = 50, height = 50, image = b_mesa_yellow_s, command = b_mesa_pressed)
 		boton_b_mesa.place(x=450 , y = 600)
@@ -691,10 +685,14 @@ def sedecal():
 		texto_ma_f.delete("1.0","end")
 		texto_ma_f.insert(INSERT, mA_f )
 
+	def reset_all():
 
+		close_window()
+		sedecal()
 
-
-
+	def close_window (): 
+		root.destroy()
+	
 
 	root = Toplevel(borderwidth= 50, relief = "flat")
 
@@ -788,12 +786,11 @@ def sedecal():
 	apr_7_s = PhotoImage(file=f'{cwd}/apr_7_s.png')
 	apr_8_s = PhotoImage(file=f'{cwd}/apr_8_s.png')
 	prep_s = PhotoImage(file=f'{cwd}/prep_s.png')
-
-
-
-
 	simbolorx_off_s = PhotoImage(file=f'{cwd}/simbolorx_off_s.png')
 	simbolorx_on_s = PhotoImage(file=f'{cwd}/simbolorx_on_s.png')
+
+
+
 	boton_shoot = Button(root , image = disparo_s , width = 40, height = 40, bg="green")
 	boton_shoot.place(x=1125 , y = 845)
 	boton_shoot.bind('<Button-1>', lambda e: Thread(target=click_shoot, daemon=True).start())
@@ -982,7 +979,7 @@ def sedecal():
 	boton_small_man_s.place(x=1040 , y = 65)
 	boton_big_man_s = Button(top_frame, image = big_man_s , width = 40, height = 40, command = None)
 	boton_big_man_s.place(x=1110 , y = 65)
-	boton_tubo_s = Button(top_frame, image = tubo_s , width = 40, height = 40, command = None)
+	boton_tubo_s = Button(top_frame, image = tubo_s , width = 40, height = 40, command = reset_all)
 	boton_tubo_s.place(x=800 , y =30)
 	boton_puesto_s = Button(top_frame, image = puesto_s , width = 40, height = 40, command = None)
 	boton_puesto_s.place(x =800 , y = 100)

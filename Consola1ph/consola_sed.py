@@ -62,19 +62,24 @@ contador_alarma = 0
 contador_servicio = 0
 t_f = 0
 p_f_s = 0
-text_1 = str("--------")
-text_2 = str("--------")
-text_3 = str("--------")
-text_4 = str("--------")
-text_5 = str("--------")
-text_6 = str("--------")
-text_7 = str("--------")
-text_8 = str("--------")
+text_1 = str(" TORAX  ")
+text_2 = str(" CRANEO ")
+text_3 = str("EXT. SUP")
+text_4 = str("EXT. INF")
+text_5 = str("ABDOMEN ")
+text_6 = str(" CADERA ")
+text_7 = str(" COLUMNA")
+text_8 = str("ESPECIAL")
 sens_s_s_str = (" " + "0")
 sens_s_s = 0
 counter_b1 = 0
-t_pa = bool()
-t_lat = bool
+t_pa = False
+t_lat = False
+t_ester = False
+t_p_costal = False
+
+
+
 
 def sedecal():
 	#seleccion kilovoltios grafia
@@ -196,6 +201,12 @@ def sedecal():
 				img = Image.open(img_db.image_db.torax_pa)
 				img.show()
 			elif t_lat == True:
+				img = Image.open(img_db.image_db.torax_lat)
+				img.show()
+			elif t_ester == True:
+				img = Image.open(img_db.image_db.torax_lat)
+				img.show()
+			elif t_p_costal == True:
 				img = Image.open(img_db.image_db.torax_lat)
 				img.show()
 			
@@ -457,39 +468,34 @@ def sedecal():
 		textomAs.insert(INSERT, mAs )
 		textomA.delete("1.0","end")
 		textomA.insert(INSERT, mA_str )
-
+#we start here with the functions of the authomatic programing resource
+#first function Thorax
 	def apr_1_pressed():
 
-		global counter_b1
-		if counter_b1 == 0:
-			apr_name_1.delete("1.0","end")
-			apr_name_1.insert(INSERT, "  Torax")
-			counter_b1 +=1 
-		elif counter_b1 == 1:
-			apr_name_1.delete("1.0","end")
-			apr_name_1.insert(INSERT, "   PA  ")	
-			apr_name_2.delete("1.0","end")
-			apr_name_2.insert(INSERT, "LATERAL")
-			apr_name_3.delete("1.0","end")
-			apr_name_3.insert(INSERT, "ESTERNON")
-			apr_name_4.delete("1.0","end")
-			apr_name_4.insert(INSERT, "P.COSTAL")
-			apr_name_5.delete("1.0","end")
-			apr_name_5.insert(INSERT, "--------")
-			apr_name_6.delete("1.0","end")
-			apr_name_6.insert(INSERT, "--------")
-			apr_name_7.delete("1.0","end")
-			apr_name_7.insert(INSERT, "--------")
-			apr_name_8.delete("1.0","end")
-			apr_name_8.insert(INSERT, "--------")
-			boton_1_s = Button(top_frame, image = apr_1_s , width = 40, height = 40, command =tecnica_torax_pa)
-			boton_1_s.place(x=500, y =30)
-			boton_2_s = Button(top_frame, image = apr_2_s , width = 40, height = 40, command = tecnica_torax_lat)
-			boton_2_s.place(x =570 , y = 30)
-			boton_3_s = Button(top_frame, image = apr_3_s , width = 40, height = 40, command = None)
-			boton_3_s.place(x=640 , y =30)
-			boton_4_s = Button(top_frame, image = apr_4_s , width = 40, height = 40, command = None)
-			boton_4_s.place(x =710 , y = 30)
+		apr_name_1.delete("1.0","end")
+		apr_name_1.insert(INSERT, "   PA  ")	
+		apr_name_2.delete("1.0","end") 
+		apr_name_2.insert(INSERT, "LATERAL")
+		apr_name_3.delete("1.0","end")
+		apr_name_3.insert(INSERT, "ESTERNON")
+		apr_name_4.delete("1.0","end")
+		apr_name_4.insert(INSERT, "P.COSTAL")
+		apr_name_5.delete("1.0","end")
+		apr_name_5.insert(INSERT, "--------")
+		apr_name_6.delete("1.0","end")
+		apr_name_6.insert(INSERT, "--------")
+		apr_name_7.delete("1.0","end")
+		apr_name_7.insert(INSERT, "--------")
+		apr_name_8.delete("1.0","end")
+		apr_name_8.insert(INSERT, "--------")
+		boton_1_s = Button(top_frame, image = apr_1_s , width = 40, height = 40, command =tecnica_torax_pa)
+		boton_1_s.place(x=500, y =30)
+		boton_2_s = Button(top_frame, image = apr_2_s , width = 40, height = 40, command = tecnica_torax_lat)
+		boton_2_s.place(x =570 , y = 30)
+		boton_3_s = Button(top_frame, image = apr_3_s , width = 40, height = 40, command = tecnica_torax_esternon)
+		boton_3_s.place(x=640 , y =30)
+		boton_4_s = Button(top_frame, image = apr_4_s , width = 40, height = 40, command = tecnica_torax_p_costal)
+		boton_4_s.place(x =710 , y = 30)
 
 	def tecnica_torax_pa():
 		global mA_str
@@ -606,11 +612,123 @@ def sedecal():
 		boton_bajarmA = Button(main_frame, image = down_button_s, width =40, height = 40,bg ="white", font=("Consolas",20), command = mAdown)
 		boton_bajarmA.place(x=362 , y = 415)
 
+	def tecnica_torax_esternon():
+		global mA_str
+		global sg 
+		global mAs
+		global mA
+		global kv
+		global releasekvdown
+		global kv_str
+		global t_ester
+		t_ester = True
+		sg = 0.1
+		mA = 200
+		mAs = mA*sg
+		kv_str = 110
+		kv_str = (" " + str(kv_str))
+		textokv.delete("1.0","end")
+		textokv.insert(INSERT, (kv_str))
+		kv = 110		
+		mA_str = (" " + str(mA))
+		textomA.delete("1.0","end")
+		textomA.insert(INSERT, mA_str )
+		textosg.delete("1.0","end")			
+		textosg.insert(INSERT, round(sg , 2))
+		textomAs.delete("1.0","end")
+		textomAs.insert(INSERT, mAs )
+		apr_name_1.delete("1.0","end")
+		apr_name_1.insert(INSERT, "--------")
+		apr_name_2.delete("1.0","end")
+		apr_name_2.insert(INSERT, "--------")
+		apr_name_4.delete("1.0","end")
+		apr_name_4.insert(INSERT, "--------")		
+		apr_name_5.delete("1.0","end")
+		apr_name_5.insert(INSERT, "--------")
+		apr_name_6.delete("1.0","end")
+		apr_name_6.insert(INSERT, "--------")
+		apr_name_7.delete("1.0","end")
+		apr_name_7.insert(INSERT, "--------")
+		apr_name_8.delete("1.0","end")
+		apr_name_8.insert(INSERT, "--------")
+		boton_subirkv = Button(main_frame, image = up_button_s, width = 40, height = 40,bg ="white", font=("Consolas",20))
+		boton_subirkv.place(x=92, y = 340)
+		boton_subirkv.bind('<Button-1>', lambda e: Thread(target=click_kv_cont_up, daemon=True).start())
+		boton_subirkv.bind('<ButtonRelease-1>', release_kv_cont_up)
+		boton_bajarkv = Button(main_frame, image = down_button_s , width = 40, height = 40,bg ="white", font=("Consolas",20))
+		boton_bajarkv.place(x=92 , y = 415)
+		boton_bajarkv.bind('<Button-1>', lambda e: Thread(target=click_kv_cont_down, daemon=True).start())
+		boton_bajarkv.bind('<ButtonRelease-1>', release_kv_cont_down)
+		boton_subirmAs = Button(main_frame, image = up_button_s, width = 40, height = 40,bg ="white", font=("Consolas",20),  command = mAs_up_sel)
+		boton_subirmAs.place(x=227, y = 340)
+		boton_bajarmAs = Button(main_frame, image = down_button_s, width =40, height = 40,bg ="white", font=("Consolas",20), command = mAs_down_sel)
+		boton_bajarmAs.place(x=227 , y = 415)
+		boton_subirmA = Button(main_frame, image = up_button_s, width = 40, height = 40,bg ="white", font=("Consolas",20),  command = mAup)
+		boton_subirmA.place(x=362, y = 340)
+		boton_bajarmA = Button(main_frame, image = down_button_s, width =40, height = 40,bg ="white", font=("Consolas",20), command = mAdown)
+		boton_bajarmA.place(x=362 , y = 415)
+
+	def tecnica_torax_p_costal():
+		global mA_str
+		global sg 
+		global mAs
+		global mA
+		global kv
+		global releasekvdown
+		global kv_str
+		global t_p_costal
+		t_p_costal = True
+		sg = 0.1
+		mA = 200
+		mAs = mA*sg
+		kv_str = 110
+		kv_str = (" " + str(kv_str))
+		textokv.delete("1.0","end")
+		textokv.insert(INSERT, (kv_str))
+		kv = 110		
+		mA_str = (" " + str(mA))
+		textomA.delete("1.0","end")
+		textomA.insert(INSERT, mA_str )
+		textosg.delete("1.0","end")			
+		textosg.insert(INSERT, round(sg , 2))
+		textomAs.delete("1.0","end")
+		textomAs.insert(INSERT, mAs )
+		apr_name_1.delete("1.0","end")
+		apr_name_1.insert(INSERT, "--------")
+		apr_name_2.delete("1.0","end")
+		apr_name_2.insert(INSERT, "--------")
+		apr_name_3.delete("1.0","end")
+		apr_name_3.insert(INSERT, "--------")		
+		apr_name_5.delete("1.0","end")
+		apr_name_5.insert(INSERT, "--------")
+		apr_name_6.delete("1.0","end")
+		apr_name_6.insert(INSERT, "--------")
+		apr_name_7.delete("1.0","end")
+		apr_name_7.insert(INSERT, "--------")
+		apr_name_8.delete("1.0","end")
+		apr_name_8.insert(INSERT, "--------")
+		boton_subirkv = Button(main_frame, image = up_button_s, width = 40, height = 40,bg ="white", font=("Consolas",20))
+		boton_subirkv.place(x=92, y = 340)
+		boton_subirkv.bind('<Button-1>', lambda e: Thread(target=click_kv_cont_up, daemon=True).start())
+		boton_subirkv.bind('<ButtonRelease-1>', release_kv_cont_up)
+		boton_bajarkv = Button(main_frame, image = down_button_s , width = 40, height = 40,bg ="white", font=("Consolas",20))
+		boton_bajarkv.place(x=92 , y = 415)
+		boton_bajarkv.bind('<Button-1>', lambda e: Thread(target=click_kv_cont_down, daemon=True).start())
+		boton_bajarkv.bind('<ButtonRelease-1>', release_kv_cont_down)
+		boton_subirmAs = Button(main_frame, image = up_button_s, width = 40, height = 40,bg ="white", font=("Consolas",20),  command = mAs_up_sel)
+		boton_subirmAs.place(x=227, y = 340)
+		boton_bajarmAs = Button(main_frame, image = down_button_s, width =40, height = 40,bg ="white", font=("Consolas",20), command = mAs_down_sel)
+		boton_bajarmAs.place(x=227 , y = 415)
+		boton_subirmA = Button(main_frame, image = up_button_s, width = 40, height = 40,bg ="white", font=("Consolas",20),  command = mAup)
+		boton_subirmA.place(x=362, y = 340)
+		boton_bajarmA = Button(main_frame, image = down_button_s, width =40, height = 40,bg ="white", font=("Consolas",20), command = mAdown)
+		boton_bajarmA.place(x=362 , y = 415)
 
 
 
 
 
+		
 
 
 	def b_mesa_pressed():
@@ -691,10 +809,14 @@ def sedecal():
 		texto_ma_f.delete("1.0","end")
 		texto_ma_f.insert(INSERT, mA_f )
 
+	def reset_all():
 
+		close_window()
+		sedecal()
 
-
-
+	def close_window (): 
+		root.destroy()
+	
 
 	root = Toplevel(borderwidth= 50, relief = "flat")
 
@@ -788,12 +910,11 @@ def sedecal():
 	apr_7_s = PhotoImage(file=f'{cwd}/apr_7_s.png')
 	apr_8_s = PhotoImage(file=f'{cwd}/apr_8_s.png')
 	prep_s = PhotoImage(file=f'{cwd}/prep_s.png')
-
-
-
-
 	simbolorx_off_s = PhotoImage(file=f'{cwd}/simbolorx_off_s.png')
 	simbolorx_on_s = PhotoImage(file=f'{cwd}/simbolorx_on_s.png')
+
+
+
 	boton_shoot = Button(root , image = disparo_s , width = 40, height = 40, bg="green")
 	boton_shoot.place(x=1125 , y = 845)
 	boton_shoot.bind('<Button-1>', lambda e: Thread(target=click_shoot, daemon=True).start())
@@ -982,7 +1103,7 @@ def sedecal():
 	boton_small_man_s.place(x=1040 , y = 65)
 	boton_big_man_s = Button(top_frame, image = big_man_s , width = 40, height = 40, command = None)
 	boton_big_man_s.place(x=1110 , y = 65)
-	boton_tubo_s = Button(top_frame, image = tubo_s , width = 40, height = 40, command = None)
+	boton_tubo_s = Button(top_frame, image = tubo_s , width = 40, height = 40, command = reset_all)
 	boton_tubo_s.place(x=800 , y =30)
 	boton_puesto_s = Button(top_frame, image = puesto_s , width = 40, height = 40, command = None)
 	boton_puesto_s.place(x =800 , y = 100)

@@ -77,6 +77,37 @@ t_pa = False
 t_lat = False
 t_ester = False
 t_p_costal = False
+t_craneo_ap = False
+t_craneo_lat = False
+t_craneo_senos = False
+t_craneo_atm = False
+t_humero_ap = False
+t_humero_lat = False
+t_humero_ap = False
+t_cub_rad_ap = False
+t_codo_ap = False
+t_codo_lat = False
+t_femur_ap = False
+t_femur_lat = False
+t_rodilla_ap = False
+t_rodilla_lat = False
+t_abd_bipe = False
+t_abd_simple = False
+t_abd_lat = False
+t_cadera_ap = False
+t_cadera_lat = False
+t_cadera_rot = False
+t_col_c_ap = False
+t_col_c_la = False
+t_col_d_ap = False
+t_col_d_la = False
+t_col_l_ap = False
+t_col_l_la = False
+t_col_s_ap = False
+t_col_s_la = False
+
+
+
 
 
 
@@ -202,13 +233,95 @@ def sedecal():
 				img.show()
 			elif t_lat == True:
 				img = Image.open(img_db.image_db.torax_lat)
-				img.show()
+				img.show()			
 			elif t_ester == True:
-				img = Image.open(img_db.image_db.torax_lat)
-				img.show()
+				img = Image.open(img_db.image_db.ester)
+				img.show()			
 			elif t_p_costal == True:
-				img = Image.open(img_db.image_db.torax_lat)
+				img = Image.open(img_db.image_db.p_costal)
+				img.show()			
+			elif t_craneo_ap == True:
+				img = Image.open(img_db.image_db.craneo_ap)
+				img.show()			
+			elif t_craneo_lat == True:
+				img = Image.open(img_db.image_db.craneo_lat)
+				img.show()			
+			elif t_craneo_senos == True:
+				img = Image.open(img_db.image_db.craneo_senos)
 				img.show()
+			elif t_craneo_atm == True:
+				img = Image.open(img_db.image_db.craneo_atm)
+				img.show()
+			elif t_humero_ap == True:
+				img = Image.open(img_db.image_db.humero_ap)
+				img.show()
+			elif t_humero_lat == True:
+				img = Image.open(img_db.image_db.humero_lat)
+				img.show()
+			elif t_cub_rad_ap == True:
+				img = Image.open(img_db.image_db.cub_rad_ap)
+				img.show()
+			elif t_codo_ap == True:
+				img = Image.open(img_db.image_db.codo_ap)
+				img.show()
+			elif t_codo_lat == True:
+				img = Image.open(img_db.image_db.codo_lat)
+				img.show()
+			elif t_femur_ap == True:
+				img = Image.open(img_db.image_db.femur_ap)
+				img.show()
+			elif t_femur_lat == True:
+				img = Image.open(img_db.image_db.femur_lat)
+				img.show()
+			elif t_rodilla_ap == True:
+				img = Image.open(img_db.image_db.rodilla_ap)
+				img.show()
+			elif t_rodilla_lat == True:
+				img = Image.open(img_db.image_db.rodilla_lat)
+				img.show()
+			elif t_abd_bipe == True:
+				img = Image.open(img_db.image_db.abd_bipe)
+				img.show()
+			elif t_abd_simple == True:
+				img = Image.open(img_db.image_db.abd_simple)
+				img.show()
+			elif t_abd_lat == True:
+				img = Image.open(img_db.image_db.abd_lat)
+				img.show()
+			elif t_cadera_ap == True:
+				img = Image.open(img_db.image_db.cadera_ap)
+				img.show()
+			elif t_cadera_lat == True:
+				img = Image.open(img_db.image_db.cadera_lat)
+				img.show()
+			elif t_cadera_rot == True:
+				img = Image.open(img_db.image_db.cadera_rot)
+				img.show()
+			elif t_col_c_ap == True:
+				img = Image.open(img_db.image_db.col_c_ap)
+				img.show()
+			elif t_col_c_la == True:
+				img = Image.open(img_db.image_db.col_c_la)
+				img.show()
+			elif t_col_d_ap == True:
+				img = Image.open(img_db.image_db.col_d_ap)
+				img.show()
+			elif t_col_d_la == True:
+				img = Image.open(img_db.image_db.col_d_la)
+				img.show()
+			elif t_col_l_ap == True:
+				img = Image.open(img_db.image_db.col_l_ap)
+				img.show()
+			elif t_col_l_la == True:
+				img = Image.open(img_db.image_db.col_l_la)
+				img.show()
+			elif t_col_s_la == True:
+				img = Image.open(img_db.image_db.col_s_ap)
+				img.show()
+			elif t_col_s_la == True:
+				img = Image.open(img_db.image_db.col_s_la)
+				img.show()
+
 			
 			contador_alarma = contador_alarma + 1
 			if contador_alarma >= 8 :
@@ -725,10 +838,1737 @@ def sedecal():
 		boton_bajarmA.place(x=362 , y = 415)
 
 
+#second function HEAD
+	def apr_2_pressed():
+
+		apr_name_1.delete("1.0","end")
+		apr_name_1.insert(INSERT, "  AP   ")	
+		apr_name_2.delete("1.0","end") 
+		apr_name_2.insert(INSERT, "LATERAL")
+		apr_name_3.delete("1.0","end")
+		apr_name_3.insert(INSERT, " SENOS ")
+		apr_name_4.delete("1.0","end")
+		apr_name_4.insert(INSERT, "  ATM  ")
+		apr_name_5.delete("1.0","end")
+		apr_name_5.insert(INSERT, "--------")
+		apr_name_6.delete("1.0","end")
+		apr_name_6.insert(INSERT, "--------")
+		apr_name_7.delete("1.0","end")
+		apr_name_7.insert(INSERT, "--------")
+		apr_name_8.delete("1.0","end")
+		apr_name_8.insert(INSERT, "--------")
+		boton_1_s = Button(top_frame, image = apr_1_s , width = 40, height = 40, command =tecnica_craneo_ap)
+		boton_1_s.place(x=500, y =30)
+		boton_2_s = Button(top_frame, image = apr_2_s , width = 40, height = 40, command = tecnica_craneo_lat)
+		boton_2_s.place(x =570 , y = 30)
+		boton_3_s = Button(top_frame, image = apr_3_s , width = 40, height = 40, command = tecnica_craneo_senos)
+		boton_3_s.place(x=640 , y =30)
+		boton_4_s = Button(top_frame, image = apr_4_s , width = 40, height = 40, command = tecnica_craneo_atm)
+		boton_4_s.place(x =710 , y = 30)
+
+
+	def tecnica_craneo_ap():
+		global mA_str
+		global sg 
+		global mAs
+		global mA
+		global kv
+		global releasekvdown
+		global kv_str
+		global t_craneo_ap
+		t_craneo_ap = True
+		sg = 0.1
+		mA = 200
+		mAs = mA*sg
+		kv_str = 110
+		kv_str = (" " + str(kv_str))
+		textokv.delete("1.0","end")
+		textokv.insert(INSERT, (kv_str))
+		kv = 110		
+		mA_str = (" " + str(mA))
+		textomA.delete("1.0","end")
+		textomA.insert(INSERT, mA_str )
+		textosg.delete("1.0","end")			
+		textosg.insert(INSERT, round(sg , 2))
+		textomAs.delete("1.0","end")
+		textomAs.insert(INSERT, mAs )
+		apr_name_2.delete("1.0","end")
+		apr_name_2.insert(INSERT, "--------")
+		apr_name_3.delete("1.0","end")
+		apr_name_3.insert(INSERT, "--------")
+		apr_name_4.delete("1.0","end")
+		apr_name_4.insert(INSERT, "--------")		
+		apr_name_5.delete("1.0","end")
+		apr_name_5.insert(INSERT, "--------")
+		apr_name_6.delete("1.0","end")
+		apr_name_6.insert(INSERT, "--------")
+		apr_name_7.delete("1.0","end")
+		apr_name_7.insert(INSERT, "--------")
+		apr_name_8.delete("1.0","end")
+		apr_name_8.insert(INSERT, "--------")
+		boton_subirkv = Button(main_frame, image = up_button_s, width = 40, height = 40,bg ="white", font=("Consolas",20))
+		boton_subirkv.place(x=92, y = 340)
+		boton_subirkv.bind('<Button-1>', lambda e: Thread(target=click_kv_cont_up, daemon=True).start())
+		boton_subirkv.bind('<ButtonRelease-1>', release_kv_cont_up)
+		boton_bajarkv = Button(main_frame, image = down_button_s , width = 40, height = 40,bg ="white", font=("Consolas",20))
+		boton_bajarkv.place(x=92 , y = 415)
+		boton_bajarkv.bind('<Button-1>', lambda e: Thread(target=click_kv_cont_down, daemon=True).start())
+		boton_bajarkv.bind('<ButtonRelease-1>', release_kv_cont_down)
+		boton_subirmAs = Button(main_frame, image = up_button_s, width = 40, height = 40,bg ="white", font=("Consolas",20),  command = mAs_up_sel)
+		boton_subirmAs.place(x=227, y = 340)
+		boton_bajarmAs = Button(main_frame, image = down_button_s, width =40, height = 40,bg ="white", font=("Consolas",20), command = mAs_down_sel)
+		boton_bajarmAs.place(x=227 , y = 415)
+		boton_subirmA = Button(main_frame, image = up_button_s, width = 40, height = 40,bg ="white", font=("Consolas",20),  command = mAup)
+		boton_subirmA.place(x=362, y = 340)
+		boton_bajarmA = Button(main_frame, image = down_button_s, width =40, height = 40,bg ="white", font=("Consolas",20), command = mAdown)
+		boton_bajarmA.place(x=362 , y = 415)
+
+
+	def tecnica_craneo_lat():
+		global mA_str
+		global sg 
+		global mAs
+		global mA
+		global kv
+		global releasekvdown
+		global kv_str
+		global t_craneo_lat
+		t_craneo_lat = True
+		sg = 0.1
+		mA = 200
+		mAs = mA*sg
+		kv_str = 110
+		kv_str = (" " + str(kv_str))
+		textokv.delete("1.0","end")
+		textokv.insert(INSERT, (kv_str))
+		kv = 110		
+		mA_str = (" " + str(mA))
+		textomA.delete("1.0","end")
+		textomA.insert(INSERT, mA_str )
+		textosg.delete("1.0","end")			
+		textosg.insert(INSERT, round(sg , 2))
+		textomAs.delete("1.0","end")
+		textomAs.insert(INSERT, mAs )
+		apr_name_1.delete("1.0","end")
+		apr_name_1.insert(INSERT, "--------")
+		apr_name_3.delete("1.0","end")
+		apr_name_3.insert(INSERT, "--------")
+		apr_name_4.delete("1.0","end")
+		apr_name_4.insert(INSERT, "--------")		
+		apr_name_5.delete("1.0","end")
+		apr_name_5.insert(INSERT, "--------")
+		apr_name_6.delete("1.0","end")
+		apr_name_6.insert(INSERT, "--------")
+		apr_name_7.delete("1.0","end")
+		apr_name_7.insert(INSERT, "--------")
+		apr_name_8.delete("1.0","end")
+		apr_name_8.insert(INSERT, "--------")
+		boton_subirkv = Button(main_frame, image = up_button_s, width = 40, height = 40,bg ="white", font=("Consolas",20))
+		boton_subirkv.place(x=92, y = 340)
+		boton_subirkv.bind('<Button-1>', lambda e: Thread(target=click_kv_cont_up, daemon=True).start())
+		boton_subirkv.bind('<ButtonRelease-1>', release_kv_cont_up)
+		boton_bajarkv = Button(main_frame, image = down_button_s , width = 40, height = 40,bg ="white", font=("Consolas",20))
+		boton_bajarkv.place(x=92 , y = 415)
+		boton_bajarkv.bind('<Button-1>', lambda e: Thread(target=click_kv_cont_down, daemon=True).start())
+		boton_bajarkv.bind('<ButtonRelease-1>', release_kv_cont_down)
+		boton_subirmAs = Button(main_frame, image = up_button_s, width = 40, height = 40,bg ="white", font=("Consolas",20),  command = mAs_up_sel)
+		boton_subirmAs.place(x=227, y = 340)
+		boton_bajarmAs = Button(main_frame, image = down_button_s, width =40, height = 40,bg ="white", font=("Consolas",20), command = mAs_down_sel)
+		boton_bajarmAs.place(x=227 , y = 415)
+		boton_subirmA = Button(main_frame, image = up_button_s, width = 40, height = 40,bg ="white", font=("Consolas",20),  command = mAup)
+		boton_subirmA.place(x=362, y = 340)
+		boton_bajarmA = Button(main_frame, image = down_button_s, width =40, height = 40,bg ="white", font=("Consolas",20), command = mAdown)
+		boton_bajarmA.place(x=362 , y = 415)
+
+
+	def tecnica_craneo_senos():
+		global mA_str
+		global sg 
+		global mAs
+		global mA
+		global kv
+		global releasekvdown
+		global kv_str
+		global t_craneo_senos
+		t_craneo_senos = True
+		sg = 0.1
+		mA = 200
+		mAs = mA*sg
+		kv_str = 110
+		kv_str = (" " + str(kv_str))
+		textokv.delete("1.0","end")
+		textokv.insert(INSERT, (kv_str))
+		kv = 110		
+		mA_str = (" " + str(mA))
+		textomA.delete("1.0","end")
+		textomA.insert(INSERT, mA_str )
+		textosg.delete("1.0","end")			
+		textosg.insert(INSERT, round(sg , 2))
+		textomAs.delete("1.0","end")
+		textomAs.insert(INSERT, mAs )
+		apr_name_1.delete("1.0","end")
+		apr_name_1.insert(INSERT, "--------")
+		apr_name_2.delete("1.0","end")
+		apr_name_2.insert(INSERT, "--------")
+		apr_name_4.delete("1.0","end")
+		apr_name_4.insert(INSERT, "--------")		
+		apr_name_5.delete("1.0","end")
+		apr_name_5.insert(INSERT, "--------")
+		apr_name_6.delete("1.0","end")
+		apr_name_6.insert(INSERT, "--------")
+		apr_name_7.delete("1.0","end")
+		apr_name_7.insert(INSERT, "--------")
+		apr_name_8.delete("1.0","end")
+		apr_name_8.insert(INSERT, "--------")
+		boton_subirkv = Button(main_frame, image = up_button_s, width = 40, height = 40,bg ="white", font=("Consolas",20))
+		boton_subirkv.place(x=92, y = 340)
+		boton_subirkv.bind('<Button-1>', lambda e: Thread(target=click_kv_cont_up, daemon=True).start())
+		boton_subirkv.bind('<ButtonRelease-1>', release_kv_cont_up)
+		boton_bajarkv = Button(main_frame, image = down_button_s , width = 40, height = 40,bg ="white", font=("Consolas",20))
+		boton_bajarkv.place(x=92 , y = 415)
+		boton_bajarkv.bind('<Button-1>', lambda e: Thread(target=click_kv_cont_down, daemon=True).start())
+		boton_bajarkv.bind('<ButtonRelease-1>', release_kv_cont_down)
+		boton_subirmAs = Button(main_frame, image = up_button_s, width = 40, height = 40,bg ="white", font=("Consolas",20),  command = mAs_up_sel)
+		boton_subirmAs.place(x=227, y = 340)
+		boton_bajarmAs = Button(main_frame, image = down_button_s, width =40, height = 40,bg ="white", font=("Consolas",20), command = mAs_down_sel)
+		boton_bajarmAs.place(x=227 , y = 415)
+		boton_subirmA = Button(main_frame, image = up_button_s, width = 40, height = 40,bg ="white", font=("Consolas",20),  command = mAup)
+		boton_subirmA.place(x=362, y = 340)
+		boton_bajarmA = Button(main_frame, image = down_button_s, width =40, height = 40,bg ="white", font=("Consolas",20), command = mAdown)
+		boton_bajarmA.place(x=362 , y = 415)
+
+
+	def tecnica_craneo_atm():
+		global mA_str
+		global sg 
+		global mAs
+		global mA
+		global kv
+		global releasekvdown
+		global kv_str
+		global t_craneo_atm
+		t_craneo_atm = True
+		sg = 0.1
+		mA = 200
+		mAs = mA*sg
+		kv_str = 110
+		kv_str = (" " + str(kv_str))
+		textokv.delete("1.0","end")
+		textokv.insert(INSERT, (kv_str))
+		kv = 110		
+		mA_str = (" " + str(mA))
+		textomA.delete("1.0","end")
+		textomA.insert(INSERT, mA_str )
+		textosg.delete("1.0","end")			
+		textosg.insert(INSERT, round(sg , 2))
+		textomAs.delete("1.0","end")
+		textomAs.insert(INSERT, mAs )
+		apr_name_1.delete("1.0","end")
+		apr_name_1.insert(INSERT, "--------")
+		apr_name_2.delete("1.0","end")
+		apr_name_2.insert(INSERT, "--------")
+		apr_name_3.delete("1.0","end")
+		apr_name_3.insert(INSERT, "--------")		
+		apr_name_5.delete("1.0","end")
+		apr_name_5.insert(INSERT, "--------")
+		apr_name_6.delete("1.0","end")
+		apr_name_6.insert(INSERT, "--------")
+		apr_name_7.delete("1.0","end")
+		apr_name_7.insert(INSERT, "--------")
+		apr_name_8.delete("1.0","end")
+		apr_name_8.insert(INSERT, "--------")
+		boton_subirkv = Button(main_frame, image = up_button_s, width = 40, height = 40,bg ="white", font=("Consolas",20))
+		boton_subirkv.place(x=92, y = 340)
+		boton_subirkv.bind('<Button-1>', lambda e: Thread(target=click_kv_cont_up, daemon=True).start())
+		boton_subirkv.bind('<ButtonRelease-1>', release_kv_cont_up)
+		boton_bajarkv = Button(main_frame, image = down_button_s , width = 40, height = 40,bg ="white", font=("Consolas",20))
+		boton_bajarkv.place(x=92 , y = 415)
+		boton_bajarkv.bind('<Button-1>', lambda e: Thread(target=click_kv_cont_down, daemon=True).start())
+		boton_bajarkv.bind('<ButtonRelease-1>', release_kv_cont_down)
+		boton_subirmAs = Button(main_frame, image = up_button_s, width = 40, height = 40,bg ="white", font=("Consolas",20),  command = mAs_up_sel)
+		boton_subirmAs.place(x=227, y = 340)
+		boton_bajarmAs = Button(main_frame, image = down_button_s, width =40, height = 40,bg ="white", font=("Consolas",20), command = mAs_down_sel)
+		boton_bajarmAs.place(x=227 , y = 415)
+		boton_subirmA = Button(main_frame, image = up_button_s, width = 40, height = 40,bg ="white", font=("Consolas",20),  command = mAup)
+		boton_subirmA.place(x=362, y = 340)
+		boton_bajarmA = Button(main_frame, image = down_button_s, width =40, height = 40,bg ="white", font=("Consolas",20), command = mAdown)
+		boton_bajarmA.place(x=362 , y = 415)
+
+
+#third function EXT.SUP
+	def apr_3_pressed():
+
+		apr_name_1.delete("1.0","end")
+		apr_name_1.insert(INSERT, "HUME  AP")	
+		apr_name_2.delete("1.0","end") 
+		apr_name_2.insert(INSERT, "HUME LAT")
+		apr_name_3.delete("1.0","end")
+		apr_name_3.insert(INSERT, "CU-RA-AP")
+		apr_name_4.delete("1.0","end")
+		apr_name_4.insert(INSERT, "CODO  AP")
+		apr_name_5.delete("1.0","end")
+		apr_name_5.insert(INSERT, "CODO LAT")
+		apr_name_6.delete("1.0","end")
+		apr_name_6.insert(INSERT, "--------")
+		apr_name_7.delete("1.0","end")
+		apr_name_7.insert(INSERT, "--------")
+		apr_name_8.delete("1.0","end")
+		apr_name_8.insert(INSERT, "--------")
+		boton_1_s = Button(top_frame, image = apr_1_s , width = 40, height = 40, command =tecnica_humero_ap)
+		boton_1_s.place(x=500, y =30)
+		boton_2_s = Button(top_frame, image = apr_2_s , width = 40, height = 40, command = tecnica_humero_lat)
+		boton_2_s.place(x =570 , y = 30)
+		boton_3_s = Button(top_frame, image = apr_3_s , width = 40, height = 40, command = tecnica_cub_rad_ap)
+		boton_3_s.place(x=640 , y =30)
+		boton_4_s = Button(top_frame, image = apr_4_s , width = 40, height = 40, command = tecnica_codo_ap)
+		boton_4_s.place(x =710 , y = 30)
+		boton_5_s = Button(top_frame, image = apr_5_s , width = 40, height = 40, command = tecnica_codo_lat)
+		boton_5_s.place(x=500 , y = 100)
+
+
+	def tecnica_humero_ap():
+		global mA_str
+		global sg 
+		global mAs
+		global mA
+		global kv
+		global releasekvdown
+		global kv_str
+		global t_humero_ap
+		t_humero_ap = True
+		sg = 0.1
+		mA = 200
+		mAs = mA*sg
+		kv_str = 110
+		kv_str = (" " + str(kv_str))
+		textokv.delete("1.0","end")
+		textokv.insert(INSERT, (kv_str))
+		kv = 110		
+		mA_str = (" " + str(mA))
+		textomA.delete("1.0","end")
+		textomA.insert(INSERT, mA_str )
+		textosg.delete("1.0","end")			
+		textosg.insert(INSERT, round(sg , 2))
+		textomAs.delete("1.0","end")
+		textomAs.insert(INSERT, mAs )
+		apr_name_2.delete("1.0","end")
+		apr_name_2.insert(INSERT, "--------")
+		apr_name_3.delete("1.0","end")
+		apr_name_3.insert(INSERT, "--------")
+		apr_name_4.delete("1.0","end")
+		apr_name_4.insert(INSERT, "--------")		
+		apr_name_5.delete("1.0","end")
+		apr_name_5.insert(INSERT, "--------")
+		apr_name_6.delete("1.0","end")
+		apr_name_6.insert(INSERT, "--------")
+		apr_name_7.delete("1.0","end")
+		apr_name_7.insert(INSERT, "--------")
+		apr_name_8.delete("1.0","end")
+		apr_name_8.insert(INSERT, "--------")
+		boton_subirkv = Button(main_frame, image = up_button_s, width = 40, height = 40,bg ="white", font=("Consolas",20))
+		boton_subirkv.place(x=92, y = 340)
+		boton_subirkv.bind('<Button-1>', lambda e: Thread(target=click_kv_cont_up, daemon=True).start())
+		boton_subirkv.bind('<ButtonRelease-1>', release_kv_cont_up)
+		boton_bajarkv = Button(main_frame, image = down_button_s , width = 40, height = 40,bg ="white", font=("Consolas",20))
+		boton_bajarkv.place(x=92 , y = 415)
+		boton_bajarkv.bind('<Button-1>', lambda e: Thread(target=click_kv_cont_down, daemon=True).start())
+		boton_bajarkv.bind('<ButtonRelease-1>', release_kv_cont_down)
+		boton_subirmAs = Button(main_frame, image = up_button_s, width = 40, height = 40,bg ="white", font=("Consolas",20),  command = mAs_up_sel)
+		boton_subirmAs.place(x=227, y = 340)
+		boton_bajarmAs = Button(main_frame, image = down_button_s, width =40, height = 40,bg ="white", font=("Consolas",20), command = mAs_down_sel)
+		boton_bajarmAs.place(x=227 , y = 415)
+		boton_subirmA = Button(main_frame, image = up_button_s, width = 40, height = 40,bg ="white", font=("Consolas",20),  command = mAup)
+		boton_subirmA.place(x=362, y = 340)
+		boton_bajarmA = Button(main_frame, image = down_button_s, width =40, height = 40,bg ="white", font=("Consolas",20), command = mAdown)
+		boton_bajarmA.place(x=362 , y = 415)
+
+
+	def tecnica_humero_lat():
+		global mA_str
+		global sg 
+		global mAs
+		global mA
+		global kv
+		global releasekvdown
+		global kv_str
+		global t_humero_lat
+		t_humero_lat = True
+		sg = 0.1
+		mA = 200
+		mAs = mA*sg
+		kv_str = 110
+		kv_str = (" " + str(kv_str))
+		textokv.delete("1.0","end")
+		textokv.insert(INSERT, (kv_str))
+		kv = 110		
+		mA_str = (" " + str(mA))
+		textomA.delete("1.0","end")
+		textomA.insert(INSERT, mA_str )
+		textosg.delete("1.0","end")			
+		textosg.insert(INSERT, round(sg , 2))
+		textomAs.delete("1.0","end")
+		textomAs.insert(INSERT, mAs )
+		apr_name_1.delete("1.0","end")
+		apr_name_1.insert(INSERT, "--------")
+		apr_name_3.delete("1.0","end")
+		apr_name_3.insert(INSERT, "--------")
+		apr_name_4.delete("1.0","end")
+		apr_name_4.insert(INSERT, "--------")		
+		apr_name_5.delete("1.0","end")
+		apr_name_5.insert(INSERT, "--------")
+		apr_name_6.delete("1.0","end")
+		apr_name_6.insert(INSERT, "--------")
+		apr_name_7.delete("1.0","end")
+		apr_name_7.insert(INSERT, "--------")
+		apr_name_8.delete("1.0","end")
+		apr_name_8.insert(INSERT, "--------")
+		boton_subirkv = Button(main_frame, image = up_button_s, width = 40, height = 40,bg ="white", font=("Consolas",20))
+		boton_subirkv.place(x=92, y = 340)
+		boton_subirkv.bind('<Button-1>', lambda e: Thread(target=click_kv_cont_up, daemon=True).start())
+		boton_subirkv.bind('<ButtonRelease-1>', release_kv_cont_up)
+		boton_bajarkv = Button(main_frame, image = down_button_s , width = 40, height = 40,bg ="white", font=("Consolas",20))
+		boton_bajarkv.place(x=92 , y = 415)
+		boton_bajarkv.bind('<Button-1>', lambda e: Thread(target=click_kv_cont_down, daemon=True).start())
+		boton_bajarkv.bind('<ButtonRelease-1>', release_kv_cont_down)
+		boton_subirmAs = Button(main_frame, image = up_button_s, width = 40, height = 40,bg ="white", font=("Consolas",20),  command = mAs_up_sel)
+		boton_subirmAs.place(x=227, y = 340)
+		boton_bajarmAs = Button(main_frame, image = down_button_s, width =40, height = 40,bg ="white", font=("Consolas",20), command = mAs_down_sel)
+		boton_bajarmAs.place(x=227 , y = 415)
+		boton_subirmA = Button(main_frame, image = up_button_s, width = 40, height = 40,bg ="white", font=("Consolas",20),  command = mAup)
+		boton_subirmA.place(x=362, y = 340)
+		boton_bajarmA = Button(main_frame, image = down_button_s, width =40, height = 40,bg ="white", font=("Consolas",20), command = mAdown)
+		boton_bajarmA.place(x=362 , y = 415)
+
+
+	def tecnica_cub_rad_ap():
+		global mA_str
+		global sg 
+		global mAs
+		global mA
+		global kv
+		global releasekvdown
+		global kv_str
+		global t_cub_rad_ap
+		t_cub_rad_ap = True
+		sg = 0.1
+		mA = 200
+		mAs = mA*sg
+		kv_str = 110
+		kv_str = (" " + str(kv_str))
+		textokv.delete("1.0","end")
+		textokv.insert(INSERT, (kv_str))
+		kv = 110		
+		mA_str = (" " + str(mA))
+		textomA.delete("1.0","end")
+		textomA.insert(INSERT, mA_str )
+		textosg.delete("1.0","end")			
+		textosg.insert(INSERT, round(sg , 2))
+		textomAs.delete("1.0","end")
+		textomAs.insert(INSERT, mAs )
+		apr_name_1.delete("1.0","end")
+		apr_name_1.insert(INSERT, "--------")
+		apr_name_2.delete("1.0","end")
+		apr_name_2.insert(INSERT, "--------")
+		apr_name_4.delete("1.0","end")
+		apr_name_4.insert(INSERT, "--------")		
+		apr_name_5.delete("1.0","end")
+		apr_name_5.insert(INSERT, "--------")
+		apr_name_6.delete("1.0","end")
+		apr_name_6.insert(INSERT, "--------")
+		apr_name_7.delete("1.0","end")
+		apr_name_7.insert(INSERT, "--------")
+		apr_name_8.delete("1.0","end")
+		apr_name_8.insert(INSERT, "--------")
+		boton_subirkv = Button(main_frame, image = up_button_s, width = 40, height = 40,bg ="white", font=("Consolas",20))
+		boton_subirkv.place(x=92, y = 340)
+		boton_subirkv.bind('<Button-1>', lambda e: Thread(target=click_kv_cont_up, daemon=True).start())
+		boton_subirkv.bind('<ButtonRelease-1>', release_kv_cont_up)
+		boton_bajarkv = Button(main_frame, image = down_button_s , width = 40, height = 40,bg ="white", font=("Consolas",20))
+		boton_bajarkv.place(x=92 , y = 415)
+		boton_bajarkv.bind('<Button-1>', lambda e: Thread(target=click_kv_cont_down, daemon=True).start())
+		boton_bajarkv.bind('<ButtonRelease-1>', release_kv_cont_down)
+		boton_subirmAs = Button(main_frame, image = up_button_s, width = 40, height = 40,bg ="white", font=("Consolas",20),  command = mAs_up_sel)
+		boton_subirmAs.place(x=227, y = 340)
+		boton_bajarmAs = Button(main_frame, image = down_button_s, width =40, height = 40,bg ="white", font=("Consolas",20), command = mAs_down_sel)
+		boton_bajarmAs.place(x=227 , y = 415)
+		boton_subirmA = Button(main_frame, image = up_button_s, width = 40, height = 40,bg ="white", font=("Consolas",20),  command = mAup)
+		boton_subirmA.place(x=362, y = 340)
+		boton_bajarmA = Button(main_frame, image = down_button_s, width =40, height = 40,bg ="white", font=("Consolas",20), command = mAdown)
+		boton_bajarmA.place(x=362 , y = 415)
+
+
+	def tecnica_codo_ap():
+		global mA_str
+		global sg 
+		global mAs
+		global mA
+		global kv
+		global releasekvdown
+		global kv_str
+		global t_codo_ap
+		t_codo_ap = True
+		sg = 0.1
+		mA = 200
+		mAs = mA*sg
+		kv_str = 110
+		kv_str = (" " + str(kv_str))
+		textokv.delete("1.0","end")
+		textokv.insert(INSERT, (kv_str))
+		kv = 110		
+		mA_str = (" " + str(mA))
+		textomA.delete("1.0","end")
+		textomA.insert(INSERT, mA_str )
+		textosg.delete("1.0","end")			
+		textosg.insert(INSERT, round(sg , 2))
+		textomAs.delete("1.0","end")
+		textomAs.insert(INSERT, mAs )
+		apr_name_1.delete("1.0","end")
+		apr_name_1.insert(INSERT, "--------")
+		apr_name_2.delete("1.0","end")
+		apr_name_2.insert(INSERT, "--------")
+		apr_name_3.delete("1.0","end")
+		apr_name_3.insert(INSERT, "--------")		
+		apr_name_5.delete("1.0","end")
+		apr_name_5.insert(INSERT, "--------")
+		apr_name_6.delete("1.0","end")
+		apr_name_6.insert(INSERT, "--------")
+		apr_name_7.delete("1.0","end")
+		apr_name_7.insert(INSERT, "--------")
+		apr_name_8.delete("1.0","end")
+		apr_name_8.insert(INSERT, "--------")
+		boton_subirkv = Button(main_frame, image = up_button_s, width = 40, height = 40,bg ="white", font=("Consolas",20))
+		boton_subirkv.place(x=92, y = 340)
+		boton_subirkv.bind('<Button-1>', lambda e: Thread(target=click_kv_cont_up, daemon=True).start())
+		boton_subirkv.bind('<ButtonRelease-1>', release_kv_cont_up)
+		boton_bajarkv = Button(main_frame, image = down_button_s , width = 40, height = 40,bg ="white", font=("Consolas",20))
+		boton_bajarkv.place(x=92 , y = 415)
+		boton_bajarkv.bind('<Button-1>', lambda e: Thread(target=click_kv_cont_down, daemon=True).start())
+		boton_bajarkv.bind('<ButtonRelease-1>', release_kv_cont_down)
+		boton_subirmAs = Button(main_frame, image = up_button_s, width = 40, height = 40,bg ="white", font=("Consolas",20),  command = mAs_up_sel)
+		boton_subirmAs.place(x=227, y = 340)
+		boton_bajarmAs = Button(main_frame, image = down_button_s, width =40, height = 40,bg ="white", font=("Consolas",20), command = mAs_down_sel)
+		boton_bajarmAs.place(x=227 , y = 415)
+		boton_subirmA = Button(main_frame, image = up_button_s, width = 40, height = 40,bg ="white", font=("Consolas",20),  command = mAup)
+		boton_subirmA.place(x=362, y = 340)
+		boton_bajarmA = Button(main_frame, image = down_button_s, width =40, height = 40,bg ="white", font=("Consolas",20), command = mAdown)
+		boton_bajarmA.place(x=362 , y = 415)
+
+	def tecnica_codo_lat():
+		global mA_str
+		global sg 
+		global mAs
+		global mA
+		global kv
+		global releasekvdown
+		global kv_str
+		global t_codo_lat
+		t_codo_lat = True
+		sg = 0.1
+		mA = 200
+		mAs = mA*sg
+		kv_str = 110
+		kv_str = (" " + str(kv_str))
+		textokv.delete("1.0","end")
+		textokv.insert(INSERT, (kv_str))
+		kv = 110		
+		mA_str = (" " + str(mA))
+		textomA.delete("1.0","end")
+		textomA.insert(INSERT, mA_str )
+		textosg.delete("1.0","end")			
+		textosg.insert(INSERT, round(sg , 2))
+		textomAs.delete("1.0","end")
+		textomAs.insert(INSERT, mAs )
+		apr_name_1.delete("1.0","end")
+		apr_name_1.insert(INSERT, "--------")
+		apr_name_2.delete("1.0","end")
+		apr_name_2.insert(INSERT, "--------")
+		apr_name_3.delete("1.0","end")
+		apr_name_3.insert(INSERT, "--------")		
+		apr_name_5.delete("1.0","end")
+		apr_name_5.insert(INSERT, "--------")
+		apr_name_6.delete("1.0","end")
+		apr_name_6.insert(INSERT, "--------")
+		apr_name_7.delete("1.0","end")
+		apr_name_7.insert(INSERT, "--------")
+		apr_name_8.delete("1.0","end")
+		apr_name_8.insert(INSERT, "--------")
+		boton_subirkv = Button(main_frame, image = up_button_s, width = 40, height = 40,bg ="white", font=("Consolas",20))
+		boton_subirkv.place(x=92, y = 340)
+		boton_subirkv.bind('<Button-1>', lambda e: Thread(target=click_kv_cont_up, daemon=True).start())
+		boton_subirkv.bind('<ButtonRelease-1>', release_kv_cont_up)
+		boton_bajarkv = Button(main_frame, image = down_button_s , width = 40, height = 40,bg ="white", font=("Consolas",20))
+		boton_bajarkv.place(x=92 , y = 415)
+		boton_bajarkv.bind('<Button-1>', lambda e: Thread(target=click_kv_cont_down, daemon=True).start())
+		boton_bajarkv.bind('<ButtonRelease-1>', release_kv_cont_down)
+		boton_subirmAs = Button(main_frame, image = up_button_s, width = 40, height = 40,bg ="white", font=("Consolas",20),  command = mAs_up_sel)
+		boton_subirmAs.place(x=227, y = 340)
+		boton_bajarmAs = Button(main_frame, image = down_button_s, width =40, height = 40,bg ="white", font=("Consolas",20), command = mAs_down_sel)
+		boton_bajarmAs.place(x=227 , y = 415)
+		boton_subirmA = Button(main_frame, image = up_button_s, width = 40, height = 40,bg ="white", font=("Consolas",20),  command = mAup)
+		boton_subirmA.place(x=362, y = 340)
+		boton_bajarmA = Button(main_frame, image = down_button_s, width =40, height = 40,bg ="white", font=("Consolas",20), command = mAdown)
+		boton_bajarmA.place(x=362 , y = 415)
+
+
+		
+#fourth function EXT.INF
+	def apr_4_pressed():
+
+		apr_name_1.delete("1.0","end")
+		apr_name_1.insert(INSERT, "FEMUR AP")	
+		apr_name_2.delete("1.0","end") 
+		apr_name_2.insert(INSERT, "FEM. LAT")
+		apr_name_3.delete("1.0","end")
+		apr_name_3.insert(INSERT, "RODI. AP")
+		apr_name_4.delete("1.0","end")
+		apr_name_4.insert(INSERT, "RODI.LAT")
+		apr_name_5.delete("1.0","end")
+		apr_name_5.insert(INSERT, "--------")
+		apr_name_6.delete("1.0","end")
+		apr_name_6.insert(INSERT, "--------")
+		apr_name_7.delete("1.0","end")
+		apr_name_7.insert(INSERT, "--------")
+		apr_name_8.delete("1.0","end")
+		apr_name_8.insert(INSERT, "--------")
+		boton_1_s = Button(top_frame, image = apr_1_s , width = 40, height = 40, command =tecnica_femur_ap)
+		boton_1_s.place(x=500, y =30)
+		boton_2_s = Button(top_frame, image = apr_2_s , width = 40, height = 40, command = tecnica_femur_lat)
+		boton_2_s.place(x =570 , y = 30)
+		boton_3_s = Button(top_frame, image = apr_3_s , width = 40, height = 40, command = tecnica_rodilla_ap)
+		boton_3_s.place(x=640 , y =30)
+		boton_4_s = Button(top_frame, image = apr_4_s , width = 40, height = 40, command = tecnica_rodilla_lat)
+		boton_4_s.place(x =710 , y = 30)
+
+
+	def tecnica_femur_ap():
+		global mA_str
+		global sg 
+		global mAs
+		global mA
+		global kv
+		global releasekvdown
+		global kv_str
+		global t_femur_ap
+		t_femur_ap = True
+		sg = 0.1
+		mA = 200
+		mAs = mA*sg
+		kv_str = 110
+		kv_str = (" " + str(kv_str))
+		textokv.delete("1.0","end")
+		textokv.insert(INSERT, (kv_str))
+		kv = 110		
+		mA_str = (" " + str(mA))
+		textomA.delete("1.0","end")
+		textomA.insert(INSERT, mA_str )
+		textosg.delete("1.0","end")			
+		textosg.insert(INSERT, round(sg , 2))
+		textomAs.delete("1.0","end")
+		textomAs.insert(INSERT, mAs )
+		apr_name_2.delete("1.0","end")
+		apr_name_2.insert(INSERT, "--------")
+		apr_name_3.delete("1.0","end")
+		apr_name_3.insert(INSERT, "--------")
+		apr_name_4.delete("1.0","end")
+		apr_name_4.insert(INSERT, "--------")		
+		apr_name_5.delete("1.0","end")
+		apr_name_5.insert(INSERT, "--------")
+		apr_name_6.delete("1.0","end")
+		apr_name_6.insert(INSERT, "--------")
+		apr_name_7.delete("1.0","end")
+		apr_name_7.insert(INSERT, "--------")
+		apr_name_8.delete("1.0","end")
+		apr_name_8.insert(INSERT, "--------")
+		boton_subirkv = Button(main_frame, image = up_button_s, width = 40, height = 40,bg ="white", font=("Consolas",20))
+		boton_subirkv.place(x=92, y = 340)
+		boton_subirkv.bind('<Button-1>', lambda e: Thread(target=click_kv_cont_up, daemon=True).start())
+		boton_subirkv.bind('<ButtonRelease-1>', release_kv_cont_up)
+		boton_bajarkv = Button(main_frame, image = down_button_s , width = 40, height = 40,bg ="white", font=("Consolas",20))
+		boton_bajarkv.place(x=92 , y = 415)
+		boton_bajarkv.bind('<Button-1>', lambda e: Thread(target=click_kv_cont_down, daemon=True).start())
+		boton_bajarkv.bind('<ButtonRelease-1>', release_kv_cont_down)
+		boton_subirmAs = Button(main_frame, image = up_button_s, width = 40, height = 40,bg ="white", font=("Consolas",20),  command = mAs_up_sel)
+		boton_subirmAs.place(x=227, y = 340)
+		boton_bajarmAs = Button(main_frame, image = down_button_s, width =40, height = 40,bg ="white", font=("Consolas",20), command = mAs_down_sel)
+		boton_bajarmAs.place(x=227 , y = 415)
+		boton_subirmA = Button(main_frame, image = up_button_s, width = 40, height = 40,bg ="white", font=("Consolas",20),  command = mAup)
+		boton_subirmA.place(x=362, y = 340)
+		boton_bajarmA = Button(main_frame, image = down_button_s, width =40, height = 40,bg ="white", font=("Consolas",20), command = mAdown)
+		boton_bajarmA.place(x=362 , y = 415)
+
+
+	def tecnica_femur_lat():
+		global mA_str
+		global sg 
+		global mAs
+		global mA
+		global kv
+		global releasekvdown
+		global kv_str
+		global t_femur_lat
+		t_femur_lat = True
+		sg = 0.1
+		mA = 200
+		mAs = mA*sg
+		kv_str = 110
+		kv_str = (" " + str(kv_str))
+		textokv.delete("1.0","end")
+		textokv.insert(INSERT, (kv_str))
+		kv = 110		
+		mA_str = (" " + str(mA))
+		textomA.delete("1.0","end")
+		textomA.insert(INSERT, mA_str )
+		textosg.delete("1.0","end")			
+		textosg.insert(INSERT, round(sg , 2))
+		textomAs.delete("1.0","end")
+		textomAs.insert(INSERT, mAs )
+		apr_name_1.delete("1.0","end")
+		apr_name_1.insert(INSERT, "--------")
+		apr_name_3.delete("1.0","end")
+		apr_name_3.insert(INSERT, "--------")
+		apr_name_4.delete("1.0","end")
+		apr_name_4.insert(INSERT, "--------")		
+		apr_name_5.delete("1.0","end")
+		apr_name_5.insert(INSERT, "--------")
+		apr_name_6.delete("1.0","end")
+		apr_name_6.insert(INSERT, "--------")
+		apr_name_7.delete("1.0","end")
+		apr_name_7.insert(INSERT, "--------")
+		apr_name_8.delete("1.0","end")
+		apr_name_8.insert(INSERT, "--------")
+		boton_subirkv = Button(main_frame, image = up_button_s, width = 40, height = 40,bg ="white", font=("Consolas",20))
+		boton_subirkv.place(x=92, y = 340)
+		boton_subirkv.bind('<Button-1>', lambda e: Thread(target=click_kv_cont_up, daemon=True).start())
+		boton_subirkv.bind('<ButtonRelease-1>', release_kv_cont_up)
+		boton_bajarkv = Button(main_frame, image = down_button_s , width = 40, height = 40,bg ="white", font=("Consolas",20))
+		boton_bajarkv.place(x=92 , y = 415)
+		boton_bajarkv.bind('<Button-1>', lambda e: Thread(target=click_kv_cont_down, daemon=True).start())
+		boton_bajarkv.bind('<ButtonRelease-1>', release_kv_cont_down)
+		boton_subirmAs = Button(main_frame, image = up_button_s, width = 40, height = 40,bg ="white", font=("Consolas",20),  command = mAs_up_sel)
+		boton_subirmAs.place(x=227, y = 340)
+		boton_bajarmAs = Button(main_frame, image = down_button_s, width =40, height = 40,bg ="white", font=("Consolas",20), command = mAs_down_sel)
+		boton_bajarmAs.place(x=227 , y = 415)
+		boton_subirmA = Button(main_frame, image = up_button_s, width = 40, height = 40,bg ="white", font=("Consolas",20),  command = mAup)
+		boton_subirmA.place(x=362, y = 340)
+		boton_bajarmA = Button(main_frame, image = down_button_s, width =40, height = 40,bg ="white", font=("Consolas",20), command = mAdown)
+		boton_bajarmA.place(x=362 , y = 415)
+
+
+	def tecnica_rodilla_ap():
+		global mA_str
+		global sg 
+		global mAs
+		global mA
+		global kv
+		global releasekvdown
+		global kv_str
+		global t_rodilla_ap
+		t_rodilla_ap = True
+		sg = 0.1
+		mA = 200
+		mAs = mA*sg
+		kv_str = 110
+		kv_str = (" " + str(kv_str))
+		textokv.delete("1.0","end")
+		textokv.insert(INSERT, (kv_str))
+		kv = 110		
+		mA_str = (" " + str(mA))
+		textomA.delete("1.0","end")
+		textomA.insert(INSERT, mA_str )
+		textosg.delete("1.0","end")			
+		textosg.insert(INSERT, round(sg , 2))
+		textomAs.delete("1.0","end")
+		textomAs.insert(INSERT, mAs )
+		apr_name_1.delete("1.0","end")
+		apr_name_1.insert(INSERT, "--------")
+		apr_name_2.delete("1.0","end")
+		apr_name_2.insert(INSERT, "--------")
+		apr_name_4.delete("1.0","end")
+		apr_name_4.insert(INSERT, "--------")		
+		apr_name_5.delete("1.0","end")
+		apr_name_5.insert(INSERT, "--------")
+		apr_name_6.delete("1.0","end")
+		apr_name_6.insert(INSERT, "--------")
+		apr_name_7.delete("1.0","end")
+		apr_name_7.insert(INSERT, "--------")
+		apr_name_8.delete("1.0","end")
+		apr_name_8.insert(INSERT, "--------")
+		boton_subirkv = Button(main_frame, image = up_button_s, width = 40, height = 40,bg ="white", font=("Consolas",20))
+		boton_subirkv.place(x=92, y = 340)
+		boton_subirkv.bind('<Button-1>', lambda e: Thread(target=click_kv_cont_up, daemon=True).start())
+		boton_subirkv.bind('<ButtonRelease-1>', release_kv_cont_up)
+		boton_bajarkv = Button(main_frame, image = down_button_s , width = 40, height = 40,bg ="white", font=("Consolas",20))
+		boton_bajarkv.place(x=92 , y = 415)
+		boton_bajarkv.bind('<Button-1>', lambda e: Thread(target=click_kv_cont_down, daemon=True).start())
+		boton_bajarkv.bind('<ButtonRelease-1>', release_kv_cont_down)
+		boton_subirmAs = Button(main_frame, image = up_button_s, width = 40, height = 40,bg ="white", font=("Consolas",20),  command = mAs_up_sel)
+		boton_subirmAs.place(x=227, y = 340)
+		boton_bajarmAs = Button(main_frame, image = down_button_s, width =40, height = 40,bg ="white", font=("Consolas",20), command = mAs_down_sel)
+		boton_bajarmAs.place(x=227 , y = 415)
+		boton_subirmA = Button(main_frame, image = up_button_s, width = 40, height = 40,bg ="white", font=("Consolas",20),  command = mAup)
+		boton_subirmA.place(x=362, y = 340)
+		boton_bajarmA = Button(main_frame, image = down_button_s, width =40, height = 40,bg ="white", font=("Consolas",20), command = mAdown)
+		boton_bajarmA.place(x=362 , y = 415)
+
+
+	def tecnica_rodilla_lat():
+		global mA_str
+		global sg 
+		global mAs
+		global mA
+		global kv
+		global releasekvdown
+		global kv_str
+		global t_rodilla_lat
+		t_rodilla_lat = True
+		sg = 0.1
+		mA = 200
+		mAs = mA*sg
+		kv_str = 110
+		kv_str = (" " + str(kv_str))
+		textokv.delete("1.0","end")
+		textokv.insert(INSERT, (kv_str))
+		kv = 110		
+		mA_str = (" " + str(mA))
+		textomA.delete("1.0","end")
+		textomA.insert(INSERT, mA_str )
+		textosg.delete("1.0","end")			
+		textosg.insert(INSERT, round(sg , 2))
+		textomAs.delete("1.0","end")
+		textomAs.insert(INSERT, mAs )
+		apr_name_1.delete("1.0","end")
+		apr_name_1.insert(INSERT, "--------")
+		apr_name_2.delete("1.0","end")
+		apr_name_2.insert(INSERT, "--------")
+		apr_name_3.delete("1.0","end")
+		apr_name_3.insert(INSERT, "--------")		
+		apr_name_5.delete("1.0","end")
+		apr_name_5.insert(INSERT, "--------")
+		apr_name_6.delete("1.0","end")
+		apr_name_6.insert(INSERT, "--------")
+		apr_name_7.delete("1.0","end")
+		apr_name_7.insert(INSERT, "--------")
+		apr_name_8.delete("1.0","end")
+		apr_name_8.insert(INSERT, "--------")
+		boton_subirkv = Button(main_frame, image = up_button_s, width = 40, height = 40,bg ="white", font=("Consolas",20))
+		boton_subirkv.place(x=92, y = 340)
+		boton_subirkv.bind('<Button-1>', lambda e: Thread(target=click_kv_cont_up, daemon=True).start())
+		boton_subirkv.bind('<ButtonRelease-1>', release_kv_cont_up)
+		boton_bajarkv = Button(main_frame, image = down_button_s , width = 40, height = 40,bg ="white", font=("Consolas",20))
+		boton_bajarkv.place(x=92 , y = 415)
+		boton_bajarkv.bind('<Button-1>', lambda e: Thread(target=click_kv_cont_down, daemon=True).start())
+		boton_bajarkv.bind('<ButtonRelease-1>', release_kv_cont_down)
+		boton_subirmAs = Button(main_frame, image = up_button_s, width = 40, height = 40,bg ="white", font=("Consolas",20),  command = mAs_up_sel)
+		boton_subirmAs.place(x=227, y = 340)
+		boton_bajarmAs = Button(main_frame, image = down_button_s, width =40, height = 40,bg ="white", font=("Consolas",20), command = mAs_down_sel)
+		boton_bajarmAs.place(x=227 , y = 415)
+		boton_subirmA = Button(main_frame, image = up_button_s, width = 40, height = 40,bg ="white", font=("Consolas",20),  command = mAup)
+		boton_subirmA.place(x=362, y = 340)
+		boton_bajarmA = Button(main_frame, image = down_button_s, width =40, height = 40,bg ="white", font=("Consolas",20), command = mAdown)
+		boton_bajarmA.place(x=362 , y = 415)
+
+#fifth function ABDOMEN
+	def apr_5_pressed():
+
+		apr_name_1.delete("1.0","end")
+		apr_name_1.insert(INSERT, "ABD BIPE")	
+		apr_name_2.delete("1.0","end") 
+		apr_name_2.insert(INSERT, "ABD SIMP")
+		apr_name_3.delete("1.0","end")
+		apr_name_3.insert(INSERT, "ABD LAT")
+		apr_name_4.delete("1.0","end")
+		apr_name_4.insert(INSERT, "--------")
+		apr_name_5.delete("1.0","end")
+		apr_name_5.insert(INSERT, "--------")
+		apr_name_6.delete("1.0","end")
+		apr_name_6.insert(INSERT, "--------")
+		apr_name_7.delete("1.0","end")
+		apr_name_7.insert(INSERT, "--------")
+		apr_name_8.delete("1.0","end")
+		apr_name_8.insert(INSERT, "--------")
+		boton_1_s = Button(top_frame, image = apr_1_s , width = 40, height = 40, command =tecnica_abd_bipe)
+		boton_1_s.place(x=500, y =30)
+		boton_2_s = Button(top_frame, image = apr_2_s , width = 40, height = 40, command = tecnica_abd_simple)
+		boton_2_s.place(x =570 , y = 30)
+		boton_3_s = Button(top_frame, image = apr_3_s , width = 40, height = 40, command = tecnica_abd_lat)
+		boton_3_s.place(x=640 , y =30)
+
+	def tecnica_abd_bipe():
+		global mA_str
+		global sg 
+		global mAs
+		global mA
+		global kv
+		global releasekvdown
+		global kv_str
+		global t_abd_bipe
+		t_abd_bipe = True
+		sg = 0.1
+		mA = 200
+		mAs = mA*sg
+		kv_str = 110
+		kv_str = (" " + str(kv_str))
+		textokv.delete("1.0","end")
+		textokv.insert(INSERT, (kv_str))
+		kv = 110		
+		mA_str = (" " + str(mA))
+		textomA.delete("1.0","end")
+		textomA.insert(INSERT, mA_str )
+		textosg.delete("1.0","end")			
+		textosg.insert(INSERT, round(sg , 2))
+		textomAs.delete("1.0","end")
+		textomAs.insert(INSERT, mAs )
+		apr_name_2.delete("1.0","end")
+		apr_name_2.insert(INSERT, "--------")
+		apr_name_3.delete("1.0","end")
+		apr_name_3.insert(INSERT, "--------")
+		apr_name_4.delete("1.0","end")
+		apr_name_4.insert(INSERT, "--------")		
+		apr_name_5.delete("1.0","end")
+		apr_name_5.insert(INSERT, "--------")
+		apr_name_6.delete("1.0","end")
+		apr_name_6.insert(INSERT, "--------")
+		apr_name_7.delete("1.0","end")
+		apr_name_7.insert(INSERT, "--------")
+		apr_name_8.delete("1.0","end")
+		apr_name_8.insert(INSERT, "--------")
+		boton_subirkv = Button(main_frame, image = up_button_s, width = 40, height = 40,bg ="white", font=("Consolas",20))
+		boton_subirkv.place(x=92, y = 340)
+		boton_subirkv.bind('<Button-1>', lambda e: Thread(target=click_kv_cont_up, daemon=True).start())
+		boton_subirkv.bind('<ButtonRelease-1>', release_kv_cont_up)
+		boton_bajarkv = Button(main_frame, image = down_button_s , width = 40, height = 40,bg ="white", font=("Consolas",20))
+		boton_bajarkv.place(x=92 , y = 415)
+		boton_bajarkv.bind('<Button-1>', lambda e: Thread(target=click_kv_cont_down, daemon=True).start())
+		boton_bajarkv.bind('<ButtonRelease-1>', release_kv_cont_down)
+		boton_subirmAs = Button(main_frame, image = up_button_s, width = 40, height = 40,bg ="white", font=("Consolas",20),  command = mAs_up_sel)
+		boton_subirmAs.place(x=227, y = 340)
+		boton_bajarmAs = Button(main_frame, image = down_button_s, width =40, height = 40,bg ="white", font=("Consolas",20), command = mAs_down_sel)
+		boton_bajarmAs.place(x=227 , y = 415)
+		boton_subirmA = Button(main_frame, image = up_button_s, width = 40, height = 40,bg ="white", font=("Consolas",20),  command = mAup)
+		boton_subirmA.place(x=362, y = 340)
+		boton_bajarmA = Button(main_frame, image = down_button_s, width =40, height = 40,bg ="white", font=("Consolas",20), command = mAdown)
+		boton_bajarmA.place(x=362 , y = 415)
+
+
+	def tecnica_abd_simple():
+		global mA_str
+		global sg 
+		global mAs
+		global mA
+		global kv
+		global releasekvdown
+		global kv_str
+		global t_abd_simple
+		t_abd_simple = True
+		sg = 0.1
+		mA = 200
+		mAs = mA*sg
+		kv_str = 110
+		kv_str = (" " + str(kv_str))
+		textokv.delete("1.0","end")
+		textokv.insert(INSERT, (kv_str))
+		kv = 110		
+		mA_str = (" " + str(mA))
+		textomA.delete("1.0","end")
+		textomA.insert(INSERT, mA_str )
+		textosg.delete("1.0","end")			
+		textosg.insert(INSERT, round(sg , 2))
+		textomAs.delete("1.0","end")
+		textomAs.insert(INSERT, mAs )
+		apr_name_1.delete("1.0","end")
+		apr_name_1.insert(INSERT, "--------")
+		apr_name_3.delete("1.0","end")
+		apr_name_3.insert(INSERT, "--------")
+		apr_name_4.delete("1.0","end")
+		apr_name_4.insert(INSERT, "--------")		
+		apr_name_5.delete("1.0","end")
+		apr_name_5.insert(INSERT, "--------")
+		apr_name_6.delete("1.0","end")
+		apr_name_6.insert(INSERT, "--------")
+		apr_name_7.delete("1.0","end")
+		apr_name_7.insert(INSERT, "--------")
+		apr_name_8.delete("1.0","end")
+		apr_name_8.insert(INSERT, "--------")
+		boton_subirkv = Button(main_frame, image = up_button_s, width = 40, height = 40,bg ="white", font=("Consolas",20))
+		boton_subirkv.place(x=92, y = 340)
+		boton_subirkv.bind('<Button-1>', lambda e: Thread(target=click_kv_cont_up, daemon=True).start())
+		boton_subirkv.bind('<ButtonRelease-1>', release_kv_cont_up)
+		boton_bajarkv = Button(main_frame, image = down_button_s , width = 40, height = 40,bg ="white", font=("Consolas",20))
+		boton_bajarkv.place(x=92 , y = 415)
+		boton_bajarkv.bind('<Button-1>', lambda e: Thread(target=click_kv_cont_down, daemon=True).start())
+		boton_bajarkv.bind('<ButtonRelease-1>', release_kv_cont_down)
+		boton_subirmAs = Button(main_frame, image = up_button_s, width = 40, height = 40,bg ="white", font=("Consolas",20),  command = mAs_up_sel)
+		boton_subirmAs.place(x=227, y = 340)
+		boton_bajarmAs = Button(main_frame, image = down_button_s, width =40, height = 40,bg ="white", font=("Consolas",20), command = mAs_down_sel)
+		boton_bajarmAs.place(x=227 , y = 415)
+		boton_subirmA = Button(main_frame, image = up_button_s, width = 40, height = 40,bg ="white", font=("Consolas",20),  command = mAup)
+		boton_subirmA.place(x=362, y = 340)
+		boton_bajarmA = Button(main_frame, image = down_button_s, width =40, height = 40,bg ="white", font=("Consolas",20), command = mAdown)
+		boton_bajarmA.place(x=362 , y = 415)
+
+
+	def tecnica_abd_lat():
+		global mA_str
+		global sg 
+		global mAs
+		global mA
+		global kv
+		global releasekvdown
+		global kv_str
+		global t_abd_lat
+		t_abd_lat = True
+		sg = 0.1
+		mA = 200
+		mAs = mA*sg
+		kv_str = 110
+		kv_str = (" " + str(kv_str))
+		textokv.delete("1.0","end")
+		textokv.insert(INSERT, (kv_str))
+		kv = 110		
+		mA_str = (" " + str(mA))
+		textomA.delete("1.0","end")
+		textomA.insert(INSERT, mA_str )
+		textosg.delete("1.0","end")			
+		textosg.insert(INSERT, round(sg , 2))
+		textomAs.delete("1.0","end")
+		textomAs.insert(INSERT, mAs )
+		apr_name_1.delete("1.0","end")
+		apr_name_1.insert(INSERT, "--------")
+		apr_name_2.delete("1.0","end")
+		apr_name_2.insert(INSERT, "--------")
+		apr_name_4.delete("1.0","end")
+		apr_name_4.insert(INSERT, "--------")		
+		apr_name_5.delete("1.0","end")
+		apr_name_5.insert(INSERT, "--------")
+		apr_name_6.delete("1.0","end")
+		apr_name_6.insert(INSERT, "--------")
+		apr_name_7.delete("1.0","end")
+		apr_name_7.insert(INSERT, "--------")
+		apr_name_8.delete("1.0","end")
+		apr_name_8.insert(INSERT, "--------")
+		boton_subirkv = Button(main_frame, image = up_button_s, width = 40, height = 40,bg ="white", font=("Consolas",20))
+		boton_subirkv.place(x=92, y = 340)
+		boton_subirkv.bind('<Button-1>', lambda e: Thread(target=click_kv_cont_up, daemon=True).start())
+		boton_subirkv.bind('<ButtonRelease-1>', release_kv_cont_up)
+		boton_bajarkv = Button(main_frame, image = down_button_s , width = 40, height = 40,bg ="white", font=("Consolas",20))
+		boton_bajarkv.place(x=92 , y = 415)
+		boton_bajarkv.bind('<Button-1>', lambda e: Thread(target=click_kv_cont_down, daemon=True).start())
+		boton_bajarkv.bind('<ButtonRelease-1>', release_kv_cont_down)
+		boton_subirmAs = Button(main_frame, image = up_button_s, width = 40, height = 40,bg ="white", font=("Consolas",20),  command = mAs_up_sel)
+		boton_subirmAs.place(x=227, y = 340)
+		boton_bajarmAs = Button(main_frame, image = down_button_s, width =40, height = 40,bg ="white", font=("Consolas",20), command = mAs_down_sel)
+		boton_bajarmAs.place(x=227 , y = 415)
+		boton_subirmA = Button(main_frame, image = up_button_s, width = 40, height = 40,bg ="white", font=("Consolas",20),  command = mAup)
+		boton_subirmA.place(x=362, y = 340)
+		boton_bajarmA = Button(main_frame, image = down_button_s, width =40, height = 40,bg ="white", font=("Consolas",20), command = mAdown)
+		boton_bajarmA.place(x=362 , y = 415)
+
+
+	
 
 
 
 		
+#Sixth function CADERA
+	def apr_6_pressed():
+
+		apr_name_1.delete("1.0","end")
+		apr_name_1.insert(INSERT, "CADER AP")	
+		apr_name_2.delete("1.0","end") 
+		apr_name_2.insert(INSERT, "CADE LAT")
+		apr_name_3.delete("1.0","end")
+		apr_name_3.insert(INSERT, "CADER RT")
+		apr_name_4.delete("1.0","end")
+		apr_name_4.insert(INSERT, "--------")
+		apr_name_5.delete("1.0","end")
+		apr_name_5.insert(INSERT, "--------")
+		apr_name_6.delete("1.0","end")
+		apr_name_6.insert(INSERT, "--------")
+		apr_name_7.delete("1.0","end")
+		apr_name_7.insert(INSERT, "--------")
+		apr_name_8.delete("1.0","end")
+		apr_name_8.insert(INSERT, "--------")
+		boton_1_s = Button(top_frame, image = apr_1_s , width = 40, height = 40, command =tecnica_cadera_ap)
+		boton_1_s.place(x=500, y =30)
+		boton_2_s = Button(top_frame, image = apr_2_s , width = 40, height = 40, command = tecnica_cadera_lat)
+		boton_2_s.place(x =570 , y = 30)
+		boton_3_s = Button(top_frame, image = apr_3_s , width = 40, height = 40, command = tecnica_cadera_rot)
+		boton_3_s.place(x=640 , y =30)
+
+
+	def tecnica_cadera_ap():
+		global mA_str
+		global sg 
+		global mAs
+		global mA
+		global kv
+		global releasekvdown
+		global kv_str
+		global t_cadera_ap
+		t_cadera_ap = True
+		sg = 0.1
+		mA = 200
+		mAs = mA*sg
+		kv_str = 110
+		kv_str = (" " + str(kv_str))
+		textokv.delete("1.0","end")
+		textokv.insert(INSERT, (kv_str))
+		kv = 110		
+		mA_str = (" " + str(mA))
+		textomA.delete("1.0","end")
+		textomA.insert(INSERT, mA_str )
+		textosg.delete("1.0","end")			
+		textosg.insert(INSERT, round(sg , 2))
+		textomAs.delete("1.0","end")
+		textomAs.insert(INSERT, mAs )
+		apr_name_2.delete("1.0","end")
+		apr_name_2.insert(INSERT, "--------")
+		apr_name_3.delete("1.0","end")
+		apr_name_3.insert(INSERT, "--------")
+		apr_name_4.delete("1.0","end")
+		apr_name_4.insert(INSERT, "--------")		
+		apr_name_5.delete("1.0","end")
+		apr_name_5.insert(INSERT, "--------")
+		apr_name_6.delete("1.0","end")
+		apr_name_6.insert(INSERT, "--------")
+		apr_name_7.delete("1.0","end")
+		apr_name_7.insert(INSERT, "--------")
+		apr_name_8.delete("1.0","end")
+		apr_name_8.insert(INSERT, "--------")
+		boton_subirkv = Button(main_frame, image = up_button_s, width = 40, height = 40,bg ="white", font=("Consolas",20))
+		boton_subirkv.place(x=92, y = 340)
+		boton_subirkv.bind('<Button-1>', lambda e: Thread(target=click_kv_cont_up, daemon=True).start())
+		boton_subirkv.bind('<ButtonRelease-1>', release_kv_cont_up)
+		boton_bajarkv = Button(main_frame, image = down_button_s , width = 40, height = 40,bg ="white", font=("Consolas",20))
+		boton_bajarkv.place(x=92 , y = 415)
+		boton_bajarkv.bind('<Button-1>', lambda e: Thread(target=click_kv_cont_down, daemon=True).start())
+		boton_bajarkv.bind('<ButtonRelease-1>', release_kv_cont_down)
+		boton_subirmAs = Button(main_frame, image = up_button_s, width = 40, height = 40,bg ="white", font=("Consolas",20),  command = mAs_up_sel)
+		boton_subirmAs.place(x=227, y = 340)
+		boton_bajarmAs = Button(main_frame, image = down_button_s, width =40, height = 40,bg ="white", font=("Consolas",20), command = mAs_down_sel)
+		boton_bajarmAs.place(x=227 , y = 415)
+		boton_subirmA = Button(main_frame, image = up_button_s, width = 40, height = 40,bg ="white", font=("Consolas",20),  command = mAup)
+		boton_subirmA.place(x=362, y = 340)
+		boton_bajarmA = Button(main_frame, image = down_button_s, width =40, height = 40,bg ="white", font=("Consolas",20), command = mAdown)
+		boton_bajarmA.place(x=362 , y = 415)
+
+
+	def tecnica_cadera_lat():
+		global mA_str
+		global sg 
+		global mAs
+		global mA
+		global kv
+		global releasekvdown
+		global kv_str
+		global t_cadera_lat
+		t_cadera_lat = True
+		sg = 0.1
+		mA = 200
+		mAs = mA*sg
+		kv_str = 110
+		kv_str = (" " + str(kv_str))
+		textokv.delete("1.0","end")
+		textokv.insert(INSERT, (kv_str))
+		kv = 110		
+		mA_str = (" " + str(mA))
+		textomA.delete("1.0","end")
+		textomA.insert(INSERT, mA_str )
+		textosg.delete("1.0","end")			
+		textosg.insert(INSERT, round(sg , 2))
+		textomAs.delete("1.0","end")
+		textomAs.insert(INSERT, mAs )
+		apr_name_1.delete("1.0","end")
+		apr_name_1.insert(INSERT, "--------")
+		apr_name_3.delete("1.0","end")
+		apr_name_3.insert(INSERT, "--------")
+		apr_name_4.delete("1.0","end")
+		apr_name_4.insert(INSERT, "--------")		
+		apr_name_5.delete("1.0","end")
+		apr_name_5.insert(INSERT, "--------")
+		apr_name_6.delete("1.0","end")
+		apr_name_6.insert(INSERT, "--------")
+		apr_name_7.delete("1.0","end")
+		apr_name_7.insert(INSERT, "--------")
+		apr_name_8.delete("1.0","end")
+		apr_name_8.insert(INSERT, "--------")
+		boton_subirkv = Button(main_frame, image = up_button_s, width = 40, height = 40,bg ="white", font=("Consolas",20))
+		boton_subirkv.place(x=92, y = 340)
+		boton_subirkv.bind('<Button-1>', lambda e: Thread(target=click_kv_cont_up, daemon=True).start())
+		boton_subirkv.bind('<ButtonRelease-1>', release_kv_cont_up)
+		boton_bajarkv = Button(main_frame, image = down_button_s , width = 40, height = 40,bg ="white", font=("Consolas",20))
+		boton_bajarkv.place(x=92 , y = 415)
+		boton_bajarkv.bind('<Button-1>', lambda e: Thread(target=click_kv_cont_down, daemon=True).start())
+		boton_bajarkv.bind('<ButtonRelease-1>', release_kv_cont_down)
+		boton_subirmAs = Button(main_frame, image = up_button_s, width = 40, height = 40,bg ="white", font=("Consolas",20),  command = mAs_up_sel)
+		boton_subirmAs.place(x=227, y = 340)
+		boton_bajarmAs = Button(main_frame, image = down_button_s, width =40, height = 40,bg ="white", font=("Consolas",20), command = mAs_down_sel)
+		boton_bajarmAs.place(x=227 , y = 415)
+		boton_subirmA = Button(main_frame, image = up_button_s, width = 40, height = 40,bg ="white", font=("Consolas",20),  command = mAup)
+		boton_subirmA.place(x=362, y = 340)
+		boton_bajarmA = Button(main_frame, image = down_button_s, width =40, height = 40,bg ="white", font=("Consolas",20), command = mAdown)
+		boton_bajarmA.place(x=362 , y = 415)
+
+
+	def tecnica_cadera_rot():
+		global mA_str
+		global sg 
+		global mAs
+		global mA
+		global kv
+		global releasekvdown
+		global kv_str
+		global t_cadera_rot
+		t_cadera_rot = True
+		sg = 0.1
+		mA = 200
+		mAs = mA*sg
+		kv_str = 110
+		kv_str = (" " + str(kv_str))
+		textokv.delete("1.0","end")
+		textokv.insert(INSERT, (kv_str))
+		kv = 110		
+		mA_str = (" " + str(mA))
+		textomA.delete("1.0","end")
+		textomA.insert(INSERT, mA_str )
+		textosg.delete("1.0","end")			
+		textosg.insert(INSERT, round(sg , 2))
+		textomAs.delete("1.0","end")
+		textomAs.insert(INSERT, mAs )
+		apr_name_1.delete("1.0","end")
+		apr_name_1.insert(INSERT, "--------")
+		apr_name_2.delete("1.0","end")
+		apr_name_2.insert(INSERT, "--------")
+		apr_name_4.delete("1.0","end")
+		apr_name_4.insert(INSERT, "--------")		
+		apr_name_5.delete("1.0","end")
+		apr_name_5.insert(INSERT, "--------")
+		apr_name_6.delete("1.0","end")
+		apr_name_6.insert(INSERT, "--------")
+		apr_name_7.delete("1.0","end")
+		apr_name_7.insert(INSERT, "--------")
+		apr_name_8.delete("1.0","end")
+		apr_name_8.insert(INSERT, "--------")
+		boton_subirkv = Button(main_frame, image = up_button_s, width = 40, height = 40,bg ="white", font=("Consolas",20))
+		boton_subirkv.place(x=92, y = 340)
+		boton_subirkv.bind('<Button-1>', lambda e: Thread(target=click_kv_cont_up, daemon=True).start())
+		boton_subirkv.bind('<ButtonRelease-1>', release_kv_cont_up)
+		boton_bajarkv = Button(main_frame, image = down_button_s , width = 40, height = 40,bg ="white", font=("Consolas",20))
+		boton_bajarkv.place(x=92 , y = 415)
+		boton_bajarkv.bind('<Button-1>', lambda e: Thread(target=click_kv_cont_down, daemon=True).start())
+		boton_bajarkv.bind('<ButtonRelease-1>', release_kv_cont_down)
+		boton_subirmAs = Button(main_frame, image = up_button_s, width = 40, height = 40,bg ="white", font=("Consolas",20),  command = mAs_up_sel)
+		boton_subirmAs.place(x=227, y = 340)
+		boton_bajarmAs = Button(main_frame, image = down_button_s, width =40, height = 40,bg ="white", font=("Consolas",20), command = mAs_down_sel)
+		boton_bajarmAs.place(x=227 , y = 415)
+		boton_subirmA = Button(main_frame, image = up_button_s, width = 40, height = 40,bg ="white", font=("Consolas",20),  command = mAup)
+		boton_subirmA.place(x=362, y = 340)
+		boton_bajarmA = Button(main_frame, image = down_button_s, width =40, height = 40,bg ="white", font=("Consolas",20), command = mAdown)
+		boton_bajarmA.place(x=362 , y = 415)
+
+#Seventh function COLUMNA
+	def apr_7_pressed():
+
+		apr_name_1.delete("1.0","end")
+		apr_name_1.insert(INSERT, "COL C AP")	
+		apr_name_2.delete("1.0","end") 
+		apr_name_2.insert(INSERT, "COL C LA")
+		apr_name_3.delete("1.0","end")
+		apr_name_3.insert(INSERT, "COL D AP")
+		apr_name_4.delete("1.0","end")
+		apr_name_4.insert(INSERT, "COL D LA")
+		apr_name_5.delete("1.0","end")
+		apr_name_5.insert(INSERT, "COL L AP")
+		apr_name_6.delete("1.0","end")
+		apr_name_6.insert(INSERT, "COL L LA")
+		apr_name_7.delete("1.0","end")
+		apr_name_7.insert(INSERT, "COL S AP")
+		apr_name_8.delete("1.0","end")
+		apr_name_8.insert(INSERT, "COL S LA")
+		boton_1_s = Button(top_frame, image = apr_1_s , width = 40, height = 40, command =tecnica_col_c_ap)
+		boton_1_s.place(x=500, y =30)
+		boton_2_s = Button(top_frame, image = apr_2_s , width = 40, height = 40, command = tecnica_col_c_la)
+		boton_2_s.place(x =570 , y = 30)
+		boton_3_s = Button(top_frame, image = apr_3_s , width = 40, height = 40, command = tecnica_col_d_ap)
+		boton_3_s.place(x=640 , y =30)
+		boton_4_s = Button(top_frame, image = apr_4_s , width = 40, height = 40, command = tecnica_col_d_la)
+		boton_4_s.place(x =710 , y = 30)
+		boton_5_s = Button(top_frame, image = apr_5_s , width = 40, height = 40, command = tecnica_col_l_ap)
+		boton_5_s.place(x=500 , y = 100)
+		boton_6_s = Button(top_frame, image = apr_6_s , width = 40, height = 40, command = tecnica_col_l_la)
+		boton_6_s.place(x =570 , y = 100)
+		boton_7_s = Button(top_frame, image = apr_7_s , width = 40, height = 40, command = tecnica_col_s_ap)
+		boton_7_s.place(x=640 , y = 100)
+		boton_8_s = Button(top_frame, image = apr_8_s , width = 40, height = 40, command = tecnica_col_s_la)
+		boton_8_s.place(x =710 , y = 100)
+
+
+
+	def tecnica_col_c_ap():
+		global mA_str
+		global sg 
+		global mAs
+		global mA
+		global kv
+		global releasekvdown
+		global kv_str
+		global t_col_c_ap
+		t_col_c_ap = True
+		sg = 0.1
+		mA = 200
+		mAs = mA*sg
+		kv_str = 110
+		kv_str = (" " + str(kv_str))
+		textokv.delete("1.0","end")
+		textokv.insert(INSERT, (kv_str))
+		kv = 110		
+		mA_str = (" " + str(mA))
+		textomA.delete("1.0","end")
+		textomA.insert(INSERT, mA_str )
+		textosg.delete("1.0","end")			
+		textosg.insert(INSERT, round(sg , 2))
+		textomAs.delete("1.0","end")
+		textomAs.insert(INSERT, mAs )
+		apr_name_2.delete("1.0","end")
+		apr_name_2.insert(INSERT, "--------")
+		apr_name_3.delete("1.0","end")
+		apr_name_3.insert(INSERT, "--------")
+		apr_name_4.delete("1.0","end")
+		apr_name_4.insert(INSERT, "--------")		
+		apr_name_5.delete("1.0","end")
+		apr_name_5.insert(INSERT, "--------")
+		apr_name_6.delete("1.0","end")
+		apr_name_6.insert(INSERT, "--------")
+		apr_name_7.delete("1.0","end")
+		apr_name_7.insert(INSERT, "--------")
+		apr_name_8.delete("1.0","end")
+		apr_name_8.insert(INSERT, "--------")
+		boton_subirkv = Button(main_frame, image = up_button_s, width = 40, height = 40,bg ="white", font=("Consolas",20))
+		boton_subirkv.place(x=92, y = 340)
+		boton_subirkv.bind('<Button-1>', lambda e: Thread(target=click_kv_cont_up, daemon=True).start())
+		boton_subirkv.bind('<ButtonRelease-1>', release_kv_cont_up)
+		boton_bajarkv = Button(main_frame, image = down_button_s , width = 40, height = 40,bg ="white", font=("Consolas",20))
+		boton_bajarkv.place(x=92 , y = 415)
+		boton_bajarkv.bind('<Button-1>', lambda e: Thread(target=click_kv_cont_down, daemon=True).start())
+		boton_bajarkv.bind('<ButtonRelease-1>', release_kv_cont_down)
+		boton_subirmAs = Button(main_frame, image = up_button_s, width = 40, height = 40,bg ="white", font=("Consolas",20),  command = mAs_up_sel)
+		boton_subirmAs.place(x=227, y = 340)
+		boton_bajarmAs = Button(main_frame, image = down_button_s, width =40, height = 40,bg ="white", font=("Consolas",20), command = mAs_down_sel)
+		boton_bajarmAs.place(x=227 , y = 415)
+		boton_subirmA = Button(main_frame, image = up_button_s, width = 40, height = 40,bg ="white", font=("Consolas",20),  command = mAup)
+		boton_subirmA.place(x=362, y = 340)
+		boton_bajarmA = Button(main_frame, image = down_button_s, width =40, height = 40,bg ="white", font=("Consolas",20), command = mAdown)
+		boton_bajarmA.place(x=362 , y = 415)
+
+
+	def tecnica_col_c_la():
+		global mA_str
+		global sg 
+		global mAs
+		global mA
+		global kv
+		global releasekvdown
+		global kv_str
+		global t_col_c_la
+		t_col_c_la = True
+		sg = 0.1
+		mA = 200
+		mAs = mA*sg
+		kv_str = 110
+		kv_str = (" " + str(kv_str))
+		textokv.delete("1.0","end")
+		textokv.insert(INSERT, (kv_str))
+		kv = 110		
+		mA_str = (" " + str(mA))
+		textomA.delete("1.0","end")
+		textomA.insert(INSERT, mA_str )
+		textosg.delete("1.0","end")			
+		textosg.insert(INSERT, round(sg , 2))
+		textomAs.delete("1.0","end")
+		textomAs.insert(INSERT, mAs )
+		apr_name_1.delete("1.0","end")
+		apr_name_1.insert(INSERT, "--------")
+		apr_name_3.delete("1.0","end")
+		apr_name_3.insert(INSERT, "--------")
+		apr_name_4.delete("1.0","end")
+		apr_name_4.insert(INSERT, "--------")		
+		apr_name_5.delete("1.0","end")
+		apr_name_5.insert(INSERT, "--------")
+		apr_name_6.delete("1.0","end")
+		apr_name_6.insert(INSERT, "--------")
+		apr_name_7.delete("1.0","end")
+		apr_name_7.insert(INSERT, "--------")
+		apr_name_8.delete("1.0","end")
+		apr_name_8.insert(INSERT, "--------")
+		boton_subirkv = Button(main_frame, image = up_button_s, width = 40, height = 40,bg ="white", font=("Consolas",20))
+		boton_subirkv.place(x=92, y = 340)
+		boton_subirkv.bind('<Button-1>', lambda e: Thread(target=click_kv_cont_up, daemon=True).start())
+		boton_subirkv.bind('<ButtonRelease-1>', release_kv_cont_up)
+		boton_bajarkv = Button(main_frame, image = down_button_s , width = 40, height = 40,bg ="white", font=("Consolas",20))
+		boton_bajarkv.place(x=92 , y = 415)
+		boton_bajarkv.bind('<Button-1>', lambda e: Thread(target=click_kv_cont_down, daemon=True).start())
+		boton_bajarkv.bind('<ButtonRelease-1>', release_kv_cont_down)
+		boton_subirmAs = Button(main_frame, image = up_button_s, width = 40, height = 40,bg ="white", font=("Consolas",20),  command = mAs_up_sel)
+		boton_subirmAs.place(x=227, y = 340)
+		boton_bajarmAs = Button(main_frame, image = down_button_s, width =40, height = 40,bg ="white", font=("Consolas",20), command = mAs_down_sel)
+		boton_bajarmAs.place(x=227 , y = 415)
+		boton_subirmA = Button(main_frame, image = up_button_s, width = 40, height = 40,bg ="white", font=("Consolas",20),  command = mAup)
+		boton_subirmA.place(x=362, y = 340)
+		boton_bajarmA = Button(main_frame, image = down_button_s, width =40, height = 40,bg ="white", font=("Consolas",20), command = mAdown)
+		boton_bajarmA.place(x=362 , y = 415)
+
+
+	def tecnica_col_d_ap():
+		global mA_str
+		global sg 
+		global mAs
+		global mA
+		global kv
+		global releasekvdown
+		global kv_str
+		global t_col_d_ap
+		t_col_d_ap = True
+		sg = 0.1
+		mA = 200
+		mAs = mA*sg
+		kv_str = 110
+		kv_str = (" " + str(kv_str))
+		textokv.delete("1.0","end")
+		textokv.insert(INSERT, (kv_str))
+		kv = 110		
+		mA_str = (" " + str(mA))
+		textomA.delete("1.0","end")
+		textomA.insert(INSERT, mA_str )
+		textosg.delete("1.0","end")			
+		textosg.insert(INSERT, round(sg , 2))
+		textomAs.delete("1.0","end")
+		textomAs.insert(INSERT, mAs )
+		apr_name_1.delete("1.0","end")
+		apr_name_1.insert(INSERT, "--------")
+		apr_name_2.delete("1.0","end")
+		apr_name_2.insert(INSERT, "--------")
+		apr_name_4.delete("1.0","end")
+		apr_name_4.insert(INSERT, "--------")		
+		apr_name_5.delete("1.0","end")
+		apr_name_5.insert(INSERT, "--------")
+		apr_name_6.delete("1.0","end")
+		apr_name_6.insert(INSERT, "--------")
+		apr_name_7.delete("1.0","end")
+		apr_name_7.insert(INSERT, "--------")
+		apr_name_8.delete("1.0","end")
+		apr_name_8.insert(INSERT, "--------")
+		boton_subirkv = Button(main_frame, image = up_button_s, width = 40, height = 40,bg ="white", font=("Consolas",20))
+		boton_subirkv.place(x=92, y = 340)
+		boton_subirkv.bind('<Button-1>', lambda e: Thread(target=click_kv_cont_up, daemon=True).start())
+		boton_subirkv.bind('<ButtonRelease-1>', release_kv_cont_up)
+		boton_bajarkv = Button(main_frame, image = down_button_s , width = 40, height = 40,bg ="white", font=("Consolas",20))
+		boton_bajarkv.place(x=92 , y = 415)
+		boton_bajarkv.bind('<Button-1>', lambda e: Thread(target=click_kv_cont_down, daemon=True).start())
+		boton_bajarkv.bind('<ButtonRelease-1>', release_kv_cont_down)
+		boton_subirmAs = Button(main_frame, image = up_button_s, width = 40, height = 40,bg ="white", font=("Consolas",20),  command = mAs_up_sel)
+		boton_subirmAs.place(x=227, y = 340)
+		boton_bajarmAs = Button(main_frame, image = down_button_s, width =40, height = 40,bg ="white", font=("Consolas",20), command = mAs_down_sel)
+		boton_bajarmAs.place(x=227 , y = 415)
+		boton_subirmA = Button(main_frame, image = up_button_s, width = 40, height = 40,bg ="white", font=("Consolas",20),  command = mAup)
+		boton_subirmA.place(x=362, y = 340)
+		boton_bajarmA = Button(main_frame, image = down_button_s, width =40, height = 40,bg ="white", font=("Consolas",20), command = mAdown)
+		boton_bajarmA.place(x=362 , y = 415)
+
+
+	def tecnica_col_d_la():
+		global mA_str
+		global sg 
+		global mAs
+		global mA
+		global kv
+		global releasekvdown
+		global kv_str
+		global t_col_d_la
+		t_col_d_la = True
+		sg = 0.1
+		mA = 200
+		mAs = mA*sg
+		kv_str = 110
+		kv_str = (" " + str(kv_str))
+		textokv.delete("1.0","end")
+		textokv.insert(INSERT, (kv_str))
+		kv = 110		
+		mA_str = (" " + str(mA))
+		textomA.delete("1.0","end")
+		textomA.insert(INSERT, mA_str )
+		textosg.delete("1.0","end")			
+		textosg.insert(INSERT, round(sg , 2))
+		textomAs.delete("1.0","end")
+		textomAs.insert(INSERT, mAs )
+		apr_name_1.delete("1.0","end")
+		apr_name_1.insert(INSERT, "--------")
+		apr_name_2.delete("1.0","end")
+		apr_name_2.insert(INSERT, "--------")
+		apr_name_3.delete("1.0","end")
+		apr_name_3.insert(INSERT, "--------")		
+		apr_name_5.delete("1.0","end")
+		apr_name_5.insert(INSERT, "--------")
+		apr_name_6.delete("1.0","end")
+		apr_name_6.insert(INSERT, "--------")
+		apr_name_7.delete("1.0","end")
+		apr_name_7.insert(INSERT, "--------")
+		apr_name_8.delete("1.0","end")
+		apr_name_8.insert(INSERT, "--------")
+		boton_subirkv = Button(main_frame, image = up_button_s, width = 40, height = 40,bg ="white", font=("Consolas",20))
+		boton_subirkv.place(x=92, y = 340)
+		boton_subirkv.bind('<Button-1>', lambda e: Thread(target=click_kv_cont_up, daemon=True).start())
+		boton_subirkv.bind('<ButtonRelease-1>', release_kv_cont_up)
+		boton_bajarkv = Button(main_frame, image = down_button_s , width = 40, height = 40,bg ="white", font=("Consolas",20))
+		boton_bajarkv.place(x=92 , y = 415)
+		boton_bajarkv.bind('<Button-1>', lambda e: Thread(target=click_kv_cont_down, daemon=True).start())
+		boton_bajarkv.bind('<ButtonRelease-1>', release_kv_cont_down)
+		boton_subirmAs = Button(main_frame, image = up_button_s, width = 40, height = 40,bg ="white", font=("Consolas",20),  command = mAs_up_sel)
+		boton_subirmAs.place(x=227, y = 340)
+		boton_bajarmAs = Button(main_frame, image = down_button_s, width =40, height = 40,bg ="white", font=("Consolas",20), command = mAs_down_sel)
+		boton_bajarmAs.place(x=227 , y = 415)
+		boton_subirmA = Button(main_frame, image = up_button_s, width = 40, height = 40,bg ="white", font=("Consolas",20),  command = mAup)
+		boton_subirmA.place(x=362, y = 340)
+		boton_bajarmA = Button(main_frame, image = down_button_s, width =40, height = 40,bg ="white", font=("Consolas",20), command = mAdown)
+		boton_bajarmA.place(x=362 , y = 415)
+
+
+	def tecnica_col_l_ap():
+		global mA_str
+		global sg 
+		global mAs
+		global mA
+		global kv
+		global releasekvdown
+		global kv_str
+		global t_col_l_ap
+		t_col_l_ap = True
+		sg = 0.1
+		mA = 200
+		mAs = mA*sg
+		kv_str = 110
+		kv_str = (" " + str(kv_str))
+		textokv.delete("1.0","end")
+		textokv.insert(INSERT, (kv_str))
+		kv = 110		
+		mA_str = (" " + str(mA))
+		textomA.delete("1.0","end")
+		textomA.insert(INSERT, mA_str )
+		textosg.delete("1.0","end")			
+		textosg.insert(INSERT, round(sg , 2))
+		textomAs.delete("1.0","end")
+		textomAs.insert(INSERT, mAs )
+		apr_name_1.delete("1.0","end")
+		apr_name_1.insert(INSERT, "--------")
+		apr_name_2.delete("1.0","end")
+		apr_name_2.insert(INSERT, "--------")
+		apr_name_3.delete("1.0","end")
+		apr_name_3.insert(INSERT, "--------")		
+		apr_name_5.delete("1.0","end")
+		apr_name_5.insert(INSERT, "--------")
+		apr_name_6.delete("1.0","end")
+		apr_name_6.insert(INSERT, "--------")
+		apr_name_7.delete("1.0","end")
+		apr_name_7.insert(INSERT, "--------")
+		apr_name_8.delete("1.0","end")
+		apr_name_8.insert(INSERT, "--------")
+		boton_subirkv = Button(main_frame, image = up_button_s, width = 40, height = 40,bg ="white", font=("Consolas",20))
+		boton_subirkv.place(x=92, y = 340)
+		boton_subirkv.bind('<Button-1>', lambda e: Thread(target=click_kv_cont_up, daemon=True).start())
+		boton_subirkv.bind('<ButtonRelease-1>', release_kv_cont_up)
+		boton_bajarkv = Button(main_frame, image = down_button_s , width = 40, height = 40,bg ="white", font=("Consolas",20))
+		boton_bajarkv.place(x=92 , y = 415)
+		boton_bajarkv.bind('<Button-1>', lambda e: Thread(target=click_kv_cont_down, daemon=True).start())
+		boton_bajarkv.bind('<ButtonRelease-1>', release_kv_cont_down)
+		boton_subirmAs = Button(main_frame, image = up_button_s, width = 40, height = 40,bg ="white", font=("Consolas",20),  command = mAs_up_sel)
+		boton_subirmAs.place(x=227, y = 340)
+		boton_bajarmAs = Button(main_frame, image = down_button_s, width =40, height = 40,bg ="white", font=("Consolas",20), command = mAs_down_sel)
+		boton_bajarmAs.place(x=227 , y = 415)
+		boton_subirmA = Button(main_frame, image = up_button_s, width = 40, height = 40,bg ="white", font=("Consolas",20),  command = mAup)
+		boton_subirmA.place(x=362, y = 340)
+		boton_bajarmA = Button(main_frame, image = down_button_s, width =40, height = 40,bg ="white", font=("Consolas",20), command = mAdown)
+		boton_bajarmA.place(x=362 , y = 415)
+
+	def tecnica_col_l_la():
+		global mA_str
+		global sg 
+		global mAs
+		global mA
+		global kv
+		global releasekvdown
+		global kv_str
+		global t_col_l_la
+		t_col_l_la = True
+		sg = 0.1
+		mA = 200
+		mAs = mA*sg
+		kv_str = 110
+		kv_str = (" " + str(kv_str))
+		textokv.delete("1.0","end")
+		textokv.insert(INSERT, (kv_str))
+		kv = 110		
+		mA_str = (" " + str(mA))
+		textomA.delete("1.0","end")
+		textomA.insert(INSERT, mA_str )
+		textosg.delete("1.0","end")			
+		textosg.insert(INSERT, round(sg , 2))
+		textomAs.delete("1.0","end")
+		textomAs.insert(INSERT, mAs )
+		apr_name_1.delete("1.0","end")
+		apr_name_1.insert(INSERT, "--------")
+		apr_name_2.delete("1.0","end")
+		apr_name_2.insert(INSERT, "--------")
+		apr_name_3.delete("1.0","end")
+		apr_name_3.insert(INSERT, "--------")		
+		apr_name_5.delete("1.0","end")
+		apr_name_5.insert(INSERT, "--------")
+		apr_name_6.delete("1.0","end")
+		apr_name_6.insert(INSERT, "--------")
+		apr_name_7.delete("1.0","end")
+		apr_name_7.insert(INSERT, "--------")
+		apr_name_8.delete("1.0","end")
+		apr_name_8.insert(INSERT, "--------")
+		boton_subirkv = Button(main_frame, image = up_button_s, width = 40, height = 40,bg ="white", font=("Consolas",20))
+		boton_subirkv.place(x=92, y = 340)
+		boton_subirkv.bind('<Button-1>', lambda e: Thread(target=click_kv_cont_up, daemon=True).start())
+		boton_subirkv.bind('<ButtonRelease-1>', release_kv_cont_up)
+		boton_bajarkv = Button(main_frame, image = down_button_s , width = 40, height = 40,bg ="white", font=("Consolas",20))
+		boton_bajarkv.place(x=92 , y = 415)
+		boton_bajarkv.bind('<Button-1>', lambda e: Thread(target=click_kv_cont_down, daemon=True).start())
+		boton_bajarkv.bind('<ButtonRelease-1>', release_kv_cont_down)
+		boton_subirmAs = Button(main_frame, image = up_button_s, width = 40, height = 40,bg ="white", font=("Consolas",20),  command = mAs_up_sel)
+		boton_subirmAs.place(x=227, y = 340)
+		boton_bajarmAs = Button(main_frame, image = down_button_s, width =40, height = 40,bg ="white", font=("Consolas",20), command = mAs_down_sel)
+		boton_bajarmAs.place(x=227 , y = 415)
+		boton_subirmA = Button(main_frame, image = up_button_s, width = 40, height = 40,bg ="white", font=("Consolas",20),  command = mAup)
+		boton_subirmA.place(x=362, y = 340)
+		boton_bajarmA = Button(main_frame, image = down_button_s, width =40, height = 40,bg ="white", font=("Consolas",20), command = mAdown)
+		boton_bajarmA.place(x=362 , y = 415)
+
+	def tecnica_col_s_ap():
+		global mA_str
+		global sg 
+		global mAs
+		global mA
+		global kv
+		global releasekvdown
+		global kv_str
+		global t_col_s_ap
+		t_col_s_ap = True
+		sg = 0.1
+		mA = 200
+		mAs = mA*sg
+		kv_str = 110
+		kv_str = (" " + str(kv_str))
+		textokv.delete("1.0","end")
+		textokv.insert(INSERT, (kv_str))
+		kv = 110		
+		mA_str = (" " + str(mA))
+		textomA.delete("1.0","end")
+		textomA.insert(INSERT, mA_str )
+		textosg.delete("1.0","end")			
+		textosg.insert(INSERT, round(sg , 2))
+		textomAs.delete("1.0","end")
+		textomAs.insert(INSERT, mAs )
+		apr_name_1.delete("1.0","end")
+		apr_name_1.insert(INSERT, "--------")
+		apr_name_2.delete("1.0","end")
+		apr_name_2.insert(INSERT, "--------")
+		apr_name_3.delete("1.0","end")
+		apr_name_3.insert(INSERT, "--------")		
+		apr_name_5.delete("1.0","end")
+		apr_name_5.insert(INSERT, "--------")
+		apr_name_6.delete("1.0","end")
+		apr_name_6.insert(INSERT, "--------")
+		apr_name_7.delete("1.0","end")
+		apr_name_7.insert(INSERT, "--------")
+		apr_name_8.delete("1.0","end")
+		apr_name_8.insert(INSERT, "--------")
+		boton_subirkv = Button(main_frame, image = up_button_s, width = 40, height = 40,bg ="white", font=("Consolas",20))
+		boton_subirkv.place(x=92, y = 340)
+		boton_subirkv.bind('<Button-1>', lambda e: Thread(target=click_kv_cont_up, daemon=True).start())
+		boton_subirkv.bind('<ButtonRelease-1>', release_kv_cont_up)
+		boton_bajarkv = Button(main_frame, image = down_button_s , width = 40, height = 40,bg ="white", font=("Consolas",20))
+		boton_bajarkv.place(x=92 , y = 415)
+		boton_bajarkv.bind('<Button-1>', lambda e: Thread(target=click_kv_cont_down, daemon=True).start())
+		boton_bajarkv.bind('<ButtonRelease-1>', release_kv_cont_down)
+		boton_subirmAs = Button(main_frame, image = up_button_s, width = 40, height = 40,bg ="white", font=("Consolas",20),  command = mAs_up_sel)
+		boton_subirmAs.place(x=227, y = 340)
+		boton_bajarmAs = Button(main_frame, image = down_button_s, width =40, height = 40,bg ="white", font=("Consolas",20), command = mAs_down_sel)
+		boton_bajarmAs.place(x=227 , y = 415)
+		boton_subirmA = Button(main_frame, image = up_button_s, width = 40, height = 40,bg ="white", font=("Consolas",20),  command = mAup)
+		boton_subirmA.place(x=362, y = 340)
+		boton_bajarmA = Button(main_frame, image = down_button_s, width =40, height = 40,bg ="white", font=("Consolas",20), command = mAdown)
+		boton_bajarmA.place(x=362 , y = 415)
+
+	def tecnica_col_s_la():
+		global mA_str
+		global sg 
+		global mAs
+		global mA
+		global kv
+		global releasekvdown
+		global kv_str
+		global t_col_s_la
+		t_col_s_la = True
+		sg = 0.1
+		mA = 200
+		mAs = mA*sg
+		kv_str = 110
+		kv_str = (" " + str(kv_str))
+		textokv.delete("1.0","end")
+		textokv.insert(INSERT, (kv_str))
+		kv = 110		
+		mA_str = (" " + str(mA))
+		textomA.delete("1.0","end")
+		textomA.insert(INSERT, mA_str )
+		textosg.delete("1.0","end")			
+		textosg.insert(INSERT, round(sg , 2))
+		textomAs.delete("1.0","end")
+		textomAs.insert(INSERT, mAs )
+		apr_name_1.delete("1.0","end")
+		apr_name_1.insert(INSERT, "--------")
+		apr_name_2.delete("1.0","end")
+		apr_name_2.insert(INSERT, "--------")
+		apr_name_3.delete("1.0","end")
+		apr_name_3.insert(INSERT, "--------")		
+		apr_name_5.delete("1.0","end")
+		apr_name_5.insert(INSERT, "--------")
+		apr_name_6.delete("1.0","end")
+		apr_name_6.insert(INSERT, "--------")
+		apr_name_7.delete("1.0","end")
+		apr_name_7.insert(INSERT, "--------")
+		apr_name_8.delete("1.0","end")
+		apr_name_8.insert(INSERT, "--------")
+		boton_subirkv = Button(main_frame, image = up_button_s, width = 40, height = 40,bg ="white", font=("Consolas",20))
+		boton_subirkv.place(x=92, y = 340)
+		boton_subirkv.bind('<Button-1>', lambda e: Thread(target=click_kv_cont_up, daemon=True).start())
+		boton_subirkv.bind('<ButtonRelease-1>', release_kv_cont_up)
+		boton_bajarkv = Button(main_frame, image = down_button_s , width = 40, height = 40,bg ="white", font=("Consolas",20))
+		boton_bajarkv.place(x=92 , y = 415)
+		boton_bajarkv.bind('<Button-1>', lambda e: Thread(target=click_kv_cont_down, daemon=True).start())
+		boton_bajarkv.bind('<ButtonRelease-1>', release_kv_cont_down)
+		boton_subirmAs = Button(main_frame, image = up_button_s, width = 40, height = 40,bg ="white", font=("Consolas",20),  command = mAs_up_sel)
+		boton_subirmAs.place(x=227, y = 340)
+		boton_bajarmAs = Button(main_frame, image = down_button_s, width =40, height = 40,bg ="white", font=("Consolas",20), command = mAs_down_sel)
+		boton_bajarmAs.place(x=227 , y = 415)
+		boton_subirmA = Button(main_frame, image = up_button_s, width = 40, height = 40,bg ="white", font=("Consolas",20),  command = mAup)
+		boton_subirmA.place(x=362, y = 340)
+		boton_bajarmA = Button(main_frame, image = down_button_s, width =40, height = 40,bg ="white", font=("Consolas",20), command = mAdown)
+		boton_bajarmA.place(x=362 , y = 415)
+
+
+
+
+
+
+
+	#eighth function ESPECIAL
+	def apr_8_pressed():
+		reset_all()
+
+
+
+	
 
 
 	def b_mesa_pressed():
@@ -810,7 +2650,71 @@ def sedecal():
 		texto_ma_f.insert(INSERT, mA_f )
 
 	def reset_all():
+		global t_pa 
+		global t_lat 
+		global t_ester 
+		global t_p_costal 
+		global t_craneo_ap 
+		global t_craneo_lat 
+		global t_craneo_senos 
+		global t_craneo_atm
+		global t_humero_ap 
+		global t_humero_lat 
+		global t_humero_ap 
+		global t_cub_rad_ap 
+		global t_codo_ap 
+		global t_codo_lat 
+		global t_femur_ap 
+		global t_femur_lat 
+		global t_rodilla_ap 
+		global t_rodilla_lat 
+		global t_abd_bipe 
+		global t_abd_simple 
+		global t_abd_lat 
+		global t_cadera_ap 
+		global t_cadera_lat 
+		global t_cadera_rot
+		global t_col_c_ap 
+		global t_col_c_la 
+		global t_col_d_ap 
+		global t_col_d_la 
+		global t_col_l_ap 
+		global t_col_l_la 
+		global t_col_s_ap 
+		global t_col_s_la 
 
+		t_lat = False
+		t_ester = False
+		t_p_costal = False
+		t_craneo_ap = False
+		t_craneo_lat = False
+		t_craneo_senos = False
+		t_craneo_atm = False
+		t_humero_ap = False
+		t_humero_lat = False
+		t_humero_ap = False
+		t_cub_rad_ap = False
+		t_codo_ap = False
+		t_codo_lat = False
+		t_femur_ap = False
+		t_femur_lat = False
+		t_rodilla_ap = False
+		t_rodilla_lat = False
+		t_abd_bipe = False
+		t_abd_simple = False
+		t_abd_lat = False
+		t_cadera_ap = False
+		t_cadera_lat = False
+		t_cadera_rot = False
+		t_col_c_ap = False
+		t_col_c_la = False
+		t_col_d_ap = False
+		t_col_d_la = False
+		t_col_l_ap = False
+		t_col_l_la = False
+		t_col_s_ap = False
+		t_col_s_la = False
+		
 		close_window()
 		sedecal()
 
@@ -837,6 +2741,7 @@ def sedecal():
 	root.resizable(0,0)
 	root.title("                                                                                                                         SIMULADOR CONSOLA MPS 64RF SEDECAL REALIZADO POR XRAY SERVICE SOLUTIONS")
 	root.iconbitmap(f'{cwd}/xray.ico')
+	
 
 
 	imagen_cam1_s = PhotoImage(file=f'{cwd}/cam_1.png')
@@ -1109,19 +3014,19 @@ def sedecal():
 	boton_puesto_s.place(x =800 , y = 100)
 	boton_1_s = Button(top_frame, image = apr_1_s , width = 40, height = 40, command =apr_1_pressed)
 	boton_1_s.place(x=500, y =30)
-	boton_2_s = Button(top_frame, image = apr_2_s , width = 40, height = 40, command = None)
+	boton_2_s = Button(top_frame, image = apr_2_s , width = 40, height = 40, command = apr_2_pressed)
 	boton_2_s.place(x =570 , y = 30)
-	boton_3_s = Button(top_frame, image = apr_3_s , width = 40, height = 40, command = None)
+	boton_3_s = Button(top_frame, image = apr_3_s , width = 40, height = 40, command = apr_3_pressed)
 	boton_3_s.place(x=640 , y =30)
-	boton_4_s = Button(top_frame, image = apr_4_s , width = 40, height = 40, command = None)
+	boton_4_s = Button(top_frame, image = apr_4_s , width = 40, height = 40, command = apr_4_pressed)
 	boton_4_s.place(x =710 , y = 30)
-	boton_5_s = Button(top_frame, image = apr_5_s , width = 40, height = 40, command = None)
+	boton_5_s = Button(top_frame, image = apr_5_s , width = 40, height = 40, command = apr_5_pressed)
 	boton_5_s.place(x=500 , y = 100)
-	boton_6_s = Button(top_frame, image = apr_6_s , width = 40, height = 40, command = None)
+	boton_6_s = Button(top_frame, image = apr_6_s , width = 40, height = 40, command = apr_6_pressed)
 	boton_6_s.place(x =570 , y = 100)
-	boton_7_s = Button(top_frame, image = apr_7_s , width = 40, height = 40, command = None)
+	boton_7_s = Button(top_frame, image = apr_7_s , width = 40, height = 40, command = apr_7_pressed)
 	boton_7_s.place(x=640 , y = 100)
-	boton_8_s = Button(top_frame, image = apr_8_s , width = 40, height = 40, command = None)
+	boton_8_s = Button(top_frame, image = apr_8_s , width = 40, height = 40, command = apr_8_pressed)
 	boton_8_s.place(x =710 , y = 100)
 
 	apr_name_1 = Text(top_frame)	

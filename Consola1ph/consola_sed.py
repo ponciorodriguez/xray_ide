@@ -2683,6 +2683,8 @@ def sedecal():
 		global t_col_s_ap 
 		global t_col_s_la 
 
+
+		t_pa = False
 		t_lat = False
 		t_ester = False
 		t_p_costal = False
@@ -2732,13 +2734,14 @@ def sedecal():
 	top_frame = Frame (root, bg = "grey")
 	top_frame.config(width=1220, height=180)
 	top_frame.pack(side = TOP, pady = 10)
+
 	x_ventana = root.winfo_screenwidth() // 2 - ancho_ventana // 2
-	y_ventana = root.winfo_screenheight() // 2 - alto_ventana // 2
+	y_ventana = root.winfo_screenheight() // 2 - ((alto_ventana // 2) - 100)
 
 	posicion = str(ancho_ventana) + "x" + str(alto_ventana) + "+" + str(x_ventana) + "+" + str(y_ventana-90)
 	root.geometry(posicion)
 
-	root.resizable(0,0)
+	root.resizable(1,1)
 	root.title("                                                                                                                         SIMULADOR CONSOLA MPS 64RF SEDECAL REALIZADO POR XRAY SERVICE SOLUTIONS")
 	root.iconbitmap(f'{cwd}/xray.ico')
 	
@@ -2821,11 +2824,11 @@ def sedecal():
 
 
 	boton_shoot = Button(root , image = disparo_s , width = 40, height = 40, bg="green")
-	boton_shoot.place(x=1125 , y = 845)
+	boton_shoot.place(x=925 , y = 735)
 	boton_shoot.bind('<Button-1>', lambda e: Thread(target=click_shoot, daemon=True).start())
 	boton_shoot.bind('<ButtonRelease-1>', release_shoot)
 	boton_prep = Button(root , image = prep_s , width = 40, height = 40, bg="grey" , command = temp_off)
-	boton_prep.place(x=1025 , y = 845)
+	boton_prep.place(x=875 , y = 735)
 	foco_fino_label = Label(main_frame, image = ff_s, width=40	, height=40,  bg="grey", fg = "black")
 	foco_fino_label.place(x=520, y= 80)
 	foco_grueso_label = Label(main_frame, image = fg_s, width=40	, height=40,  bg="grey", fg = "black")
@@ -3084,6 +3087,8 @@ def sedecal():
 
 	root.mainloop()
 
+#sedecal()
 
-sedecal()
+
+
 

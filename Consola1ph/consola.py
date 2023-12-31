@@ -2574,15 +2574,16 @@ def philips():
 	
 	ancho_ventana = 1325
 	alto_ventana = 850
-
-
 	x_ventana = root.winfo_screenwidth() // 2 - ancho_ventana // 2
-	y_ventana = root.winfo_screenheight() // 2 - alto_ventana // 2
+	y_ventana = root.winfo_screenheight() // 2 - ((alto_ventana // 2) - 50)
+
+	#x_ventana = root.winfo_screenwidth() // 2 - ancho_ventana // 2
+	#y_ventana = root.winfo_screenheight() // 2 - alto_ventana // 2
 
 	posicion = str(ancho_ventana) + "x" + str(alto_ventana) + "+" + str(x_ventana) + "+" + str(y_ventana-90)
 	root.geometry(posicion)
 
-	root.resizable(0,0)
+	root.resizable(1,1)
 	# root.geometry("1325x850")
 	# root.resizable(0,0)
 	root.title("                                                                                                                             SIMULADOR CONSOLA MEDIO CP PHILIPS REALIZADO POR XRAY SERVICE SOLUTIONS")
